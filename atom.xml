@@ -3,11 +3,11 @@
   <title>魚仔電腦應用</title>
   
   <subtitle>軟體教學、3C開箱、家裡Linux的日常</subtitle>
-  <link href="https://f914095.github.io/fishpc.github.io/atom.xml" rel="self"/>
+  <link href="https://fishpcblog.github.io/fishpcblog.github.io/atom.xml" rel="self"/>
   
-  <link href="https://f914095.github.io/fishpc.github.io/"/>
+  <link href="https://fishpcblog.github.io/fishpcblog.github.io/"/>
   <updated>2021-09-30T04:34:14.464Z</updated>
-  <id>https://f914095.github.io/fishpc.github.io/</id>
+  <id>https://fishpcblog.github.io/fishpcblog.github.io/</id>
   
   <author>
     <name>Joe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://f914095.github.io/fishpc.github.io/uncategorized/2021/10/02/hello-world/"/>
-    <id>https://f914095.github.io/fishpc.github.io/uncategorized/2021/10/02/hello-world/</id>
+    <link href="https://fishpcblog.github.io/fishpcblog.github.io/uncategorized/2021/10/02/hello-world/"/>
+    <id>https://fishpcblog.github.io/fishpcblog.github.io/uncategorized/2021/10/02/hello-world/</id>
     <published>2021-10-02T10:56:57.395Z</published>
     <updated>2021-09-30T04:34:14.464Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Google 文件教學-如何使用文字藝術師？</title>
-    <link href="https://f914095.github.io/fishpc.github.io/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/2021/09/30/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F2222/"/>
-    <id>https://f914095.github.io/fishpc.github.io/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/2021/09/30/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F2222/</id>
+    <link href="https://fishpcblog.github.io/fishpcblog.github.io/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/2021/09/30/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F2222/"/>
+    <id>https://fishpcblog.github.io/fishpcblog.github.io/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/2021/09/30/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F2222/</id>
     <published>2021-09-30T04:47:24.000Z</published>
     <updated>2021-10-05T04:06:00.105Z</updated>
     
@@ -50,12 +50,12 @@
     
     
     
-    <category term="軟體教學" scheme="https://f914095.github.io/fishpc.github.io/categories/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/"/>
+    <category term="軟體教學" scheme="https://fishpcblog.github.io/fishpcblog.github.io/categories/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/"/>
     
-    <category term="Google google文件" scheme="https://f914095.github.io/fishpc.github.io/categories/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/"/>
+    <category term="Google google文件" scheme="https://fishpcblog.github.io/fishpcblog.github.io/categories/%E8%BB%9F%E9%AB%94%E6%95%99%E5%AD%B8/Google-google%E6%96%87%E4%BB%B6/"/>
     
     
-    <category term="Google 文件教學" scheme="https://f914095.github.io/fishpc.github.io/tags/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
+    <category term="Google 文件教學" scheme="https://fishpcblog.github.io/fishpcblog.github.io/tags/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
     
   </entry>
   
