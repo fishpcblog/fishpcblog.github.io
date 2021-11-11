@@ -947,6 +947,14 @@ a.article-title:hover {
   max-width: 100%;
   margin: 0 auto;
 }
+.related-posts-item {
+  font-size: 16px;
+}
+.related-posts-item-abstract {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* ends with '...' of abstract */
+}
 #comments {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
