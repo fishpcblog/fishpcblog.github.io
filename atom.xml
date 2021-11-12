@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小魚電腦應用</title>
   
-  <subtitle>自由軟體教學、3C開箱、家裡Linux的日常</subtitle>
+  <subtitle>自由軟體教學、3C開箱、家裡Fedora的日常</subtitle>
   <link href="https://fishpcinfo.com/atom.xml" rel="self"/>
   
   <link href="https://fishpcinfo.com/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Google 文件教學-如何免費取得內建範本！！</title>
-    <link href="https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E5%85%8D%E8%B2%BB%E5%8F%96%E5%BE%97%E5%85%A7%E5%BB%BA%E7%AF%84%E6%9C%AC/"/>
-    <id>https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E5%85%8D%E8%B2%BB%E5%8F%96%E5%BE%97%E5%85%A7%E5%BB%BA%E7%AF%84%E6%9C%AC/</id>
+    <link href="https://fishpcinfo.com/2021/08/GoogleTemplates/"/>
+    <id>https://fishpcinfo.com/2021/08/GoogleTemplates/</id>
     <published>2021-08-14T00:00:00.000Z</published>
     <updated>2021-10-21T02:53:01.922Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Google 文件教學-看完這篇快速搞定惱人的編號清單！！</title>
-    <link href="https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E7%9C%8B%E5%AE%8C%E9%80%99%E7%AF%87%E5%BF%AB%E9%80%9F%E6%90%9E%E5%AE%9A%E6%83%B1%E4%BA%BA%E7%9A%84%E7%B7%A8%E8%99%9F%E6%B8%85%E5%96%AE/"/>
-    <id>https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E7%9C%8B%E5%AE%8C%E9%80%99%E7%AF%87%E5%BF%AB%E9%80%9F%E6%90%9E%E5%AE%9A%E6%83%B1%E4%BA%BA%E7%9A%84%E7%B7%A8%E8%99%9F%E6%B8%85%E5%96%AE/</id>
+    <link href="https://fishpcinfo.com/2021/07/googleList/"/>
+    <id>https://fishpcinfo.com/2021/07/googleList/</id>
     <published>2021-07-31T00:00:00.000Z</published>
     <updated>2021-10-20T02:26:31.322Z</updated>
     
@@ -61,8 +61,8 @@
   
   <entry>
     <title>Google 文件教學-如何使用文字藝術師？</title>
-    <link href="https://fishpcinfo.com/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F/"/>
-    <id>https://fishpcinfo.com/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E5%AD%97%E8%97%9D%E8%A1%93%E5%B8%AB%EF%BC%9F/</id>
+    <link href="https://fishpcinfo.com/2021/07/googleWordArt/"/>
+    <id>https://fishpcinfo.com/2021/07/googleWordArt/</id>
     <published>2021-07-17T00:00:00.000Z</published>
     <updated>2021-10-20T11:22:34.583Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>Google 文件教學-運用三種方法讓你的段落編排更上一層樓</title>
-    <link href="https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E9%81%8B%E7%94%A8%E4%B8%89%E7%A8%AE%E6%96%B9%E6%B3%95%E8%AE%93%E4%BD%A0%E7%9A%84%E6%AE%B5%E8%90%BD%E7%B7%A8%E6%8E%92%E6%9B%B4%E4%B8%8A%E4%B8%80%E5%B1%A4%E6%A8%93/"/>
-    <id>https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E9%81%8B%E7%94%A8%E4%B8%89%E7%A8%AE%E6%96%B9%E6%B3%95%E8%AE%93%E4%BD%A0%E7%9A%84%E6%AE%B5%E8%90%BD%E7%B7%A8%E6%8E%92%E6%9B%B4%E4%B8%8A%E4%B8%80%E5%B1%A4%E6%A8%93/</id>
+    <link href="https://fishpcinfo.com/2021/06/googlepart/"/>
+    <id>https://fishpcinfo.com/2021/06/googlepart/</id>
     <published>2021-06-26T00:00:00.000Z</published>
     <updated>2021-10-20T11:40:46.440Z</updated>
     
@@ -103,8 +103,8 @@
   
   <entry>
     <title>Google 文件教學-無法刪除空白頁？教你2種情境4種方法刪除惱人空白頁！！</title>
-    <link href="https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E7%84%A1%E6%B3%95%E5%88%AA%E9%99%A4%E7%A9%BA%E7%99%BD%E9%A0%81%EF%BC%9F%E6%95%99%E4%BD%A02%E7%A8%AE%E6%83%85%E5%A2%834%E7%A8%AE%E6%96%B9%E6%B3%95%E5%88%AA%E9%99%A4%E6%83%B1%E4%BA%BA%E7%A9%BA%E7%99%BD%E9%A0%81%EF%BC%81%EF%BC%81/"/>
-    <id>https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E7%84%A1%E6%B3%95%E5%88%AA%E9%99%A4%E7%A9%BA%E7%99%BD%E9%A0%81%EF%BC%9F%E6%95%99%E4%BD%A02%E7%A8%AE%E6%83%85%E5%A2%834%E7%A8%AE%E6%96%B9%E6%B3%95%E5%88%AA%E9%99%A4%E6%83%B1%E4%BA%BA%E7%A9%BA%E7%99%BD%E9%A0%81%EF%BC%81%EF%BC%81/</id>
+    <link href="https://fishpcinfo.com/2021/06/googleDocs-deletePage/"/>
+    <id>https://fishpcinfo.com/2021/06/googleDocs-deletePage/</id>
     <published>2021-06-21T00:00:00.000Z</published>
     <updated>2021-10-19T02:29:02.453Z</updated>
     
@@ -125,10 +125,10 @@
   
   <entry>
     <title>Google 文件教學-Shift+Enter換行與Enter換行差別</title>
-    <link href="https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-Shift+Enter%E6%8F%9B%E8%A1%8C%E8%88%87Enter%E6%8F%9B%E8%A1%8C%E5%B7%AE%E5%88%A5/"/>
-    <id>https://fishpcinfo.com/Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-Shift+Enter%E6%8F%9B%E8%A1%8C%E8%88%87Enter%E6%8F%9B%E8%A1%8C%E5%B7%AE%E5%88%A5/</id>
+    <link href="https://fishpcinfo.com/2021/06/google-shiftenterenter/"/>
+    <id>https://fishpcinfo.com/2021/06/google-shiftenterenter/</id>
     <published>2021-06-19T00:00:00.000Z</published>
-    <updated>2021-10-19T10:51:17.953Z</updated>
+    <updated>2021-11-12T04:33:30.704Z</updated>
     
     <content type="html"><![CDATA[<p>在文書處理裡面，換行是大家都會用的功能，不過呢它其實更細分為shift+enter與enter。如果不知道這兩個功用而錯用了，可是會吃盡苦呢。<br>今天本文會介紹Shift+Enter換行與Enter換行差別</p><span id="more"></span><h2 id="Enter-換行-劃分段落"><a href="#Enter-換行-劃分段落" class="headerlink" title="Enter 換行(劃分段落)"></a>Enter 換行(劃分段落)</h2><p>首先這邊我想舉一個例子，這個例子就是有一份文件是要寫台灣農產品介紹，這份文章架構規劃是段落一是寫西瓜，段落二是寫芒果，然後呢文章架構規劃完之後，那麼我們可以打開Google 文件後開始寫第一段落內容，當第一段內容寫完後想要寫第二段落就可以按enter。<br>這樣子整篇文章寫完之後我們可以在段落設定上調整段落一可是呢它是不會影響到段落二的，相反的調整段落二也是不會影響到段落一的，如下圖。所以我們可以解釋成Enter功能是在做劃分段落。</p><p><img src="https://firebasestorage.googleapis.com/v0/b/fishpcblog.appspot.com/o/07.Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-shift%2Benter%20%E8%88%87enter%E4%B8%8D%E5%90%8C%2F%E5%8A%83%E5%88%86%E6%AE%B5%E8%90%BD.jpg?alt=media&token=8722035b-3008-4199-a1f0-f774c344ffdb" alt="劃分段落"></p><h2 id="Shift-Enter-同一段落換行"><a href="#Shift-Enter-同一段落換行" class="headerlink" title="Shift+Enter (同一段落換行)"></a>Shift+Enter (同一段落換行)</h2><p>這個功能我也舉一個例子，比如一份文件裡面在講台灣農產品，段落一是在講西瓜，那介紹段落可以分為品種、種植時間、料理方式。那適時同一段落換行，有助於讀者閱讀，如下圖。</p><p><img src="https://firebasestorage.googleapis.com/v0/b/fishpcblog.appspot.com/o/07.Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-shift%2Benter%20%E8%88%87enter%E4%B8%8D%E5%90%8C%2F%E5%90%8C%E6%AE%B5%E8%90%BD%E6%8F%9B%E8%A1%8C.jpg?alt=media&token=ce38c801-fb44-44f9-b661-a38082c6e08f" alt="同段落換行"></p><p>那麼第二個例子就是同段落換行應用在編號上的排版。比如編號一是西瓜，那要詳細介紹西瓜可以按Shift+Enter進行同一段落換行後開始寫詳細介紹，這樣子可以避免產生編號，如下圖。</p><p><img src="https://firebasestorage.googleapis.com/v0/b/fishpcblog.appspot.com/o/07.Google%20%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-shift%2Benter%20%E8%88%87enter%E4%B8%8D%E5%90%8C%2F%E5%90%8C%E6%AE%B5%E8%90%BD%E6%8F%9B%E8%A1%8C-%E7%B7%A8%E8%99%9F.jpg?alt=media&token=0c208970-c190-46f7-ae18-39bb89868274" alt="同段落換行-編號"></p><h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><p>今天介紹了Shift+Enter換行與Enter換行差別，希望對您有幫助。其實呢Enter與Shift+Enter簡單扼要說明就是如果要同一段落換行就是使用Shift+Enter， 如果不同段落則要使用Enter，如果不正確使用的話，最後文件到排版階段時做段落設定或者行距又或者是編號調整時會無法如你設定顯示喔。<br>還有就是這邊我想要提醒一下就是您在Google 文件做Shift+Enter與Enter的換行符號是不會顯示出來的。</p><p>最後希望這篇文章能幫助到你在使用Google 文件更邁進了一大步。<br>如果這篇文章對你有幫助請記得按讚並分享給使用Google 文件的人，最後你已經學會了Shift+Enter換行與Enter換行差別嗎？底下留言告訴我。</p>]]></content>
     
@@ -139,6 +139,8 @@
     
     <category term="Google雲端服務" scheme="https://fishpcinfo.com/categories/GoogleCloudService/"/>
     
+    <category term="Google文件教學" scheme="https://fishpcinfo.com/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
+    
     
     <category term="Google文件教學" scheme="https://fishpcinfo.com/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
     
@@ -146,8 +148,8 @@
   
   <entry>
     <title>Google 文件教學-分節符號應用</title>
-    <link href="https://fishpcinfo.com/sgement/"/>
-    <id>https://fishpcinfo.com/sgement/</id>
+    <link href="https://fishpcinfo.com/2021/06/GoogleDocsSegmentSymbol/"/>
+    <id>https://fishpcinfo.com/2021/06/GoogleDocsSegmentSymbol/</id>
     <published>2021-06-05T00:00:00.000Z</published>
     <updated>2021-10-19T02:28:09.453Z</updated>
     
@@ -167,8 +169,8 @@
   
   <entry>
     <title>Google 文件教學-新增刪除上一頁空白頁</title>
-    <link href="https://fishpcinfo.com/google%E6%96%87%E4%BB%B6-%E6%96%B0%E5%A2%9E%E5%88%AA%E9%99%A4%E4%B8%8A%E4%B8%80%E9%A0%81%E7%A9%BA%E7%99%BD%E9%A0%81/"/>
-    <id>https://fishpcinfo.com/google%E6%96%87%E4%BB%B6-%E6%96%B0%E5%A2%9E%E5%88%AA%E9%99%A4%E4%B8%8A%E4%B8%80%E9%A0%81%E7%A9%BA%E7%99%BD%E9%A0%81/</id>
+    <link href="https://fishpcinfo.com/2021/05/google%E6%96%87%E4%BB%B6-%E6%96%B0%E5%A2%9E%E5%88%AA%E9%99%A4%E4%B8%8A%E4%B8%80%E9%A0%81%E7%A9%BA%E7%99%BD%E9%A0%81/"/>
+    <id>https://fishpcinfo.com/2021/05/google%E6%96%87%E4%BB%B6-%E6%96%B0%E5%A2%9E%E5%88%AA%E9%99%A4%E4%B8%8A%E4%B8%80%E9%A0%81%E7%A9%BA%E7%99%BD%E9%A0%81/</id>
     <published>2021-05-26T00:00:00.000Z</published>
     <updated>2021-10-19T02:28:20.437Z</updated>
     
@@ -189,18 +191,15 @@
   
   <entry>
     <title>如何選擇WIN10 家用版或者是專業版</title>
-    <link href="https://fishpcinfo.com/%E5%A6%82%E4%BD%95%E9%81%B8%E6%93%87WIN10%20%E5%AE%B6%E7%94%A8%E7%89%88%E6%88%96%E8%80%85%E6%98%AF%E5%B0%88%E6%A5%AD%E7%89%88/"/>
-    <id>https://fishpcinfo.com/%E5%A6%82%E4%BD%95%E9%81%B8%E6%93%87WIN10%20%E5%AE%B6%E7%94%A8%E7%89%88%E6%88%96%E8%80%85%E6%98%AF%E5%B0%88%E6%A5%AD%E7%89%88/</id>
+    <link href="https://fishpcinfo.com/2019/11/%E5%A6%82%E4%BD%95%E9%81%B8%E6%93%87WIN10%20%E5%AE%B6%E7%94%A8%E7%89%88%E6%88%96%E8%80%85%E6%98%AF%E5%B0%88%E6%A5%AD%E7%89%88/"/>
+    <id>https://fishpcinfo.com/2019/11/%E5%A6%82%E4%BD%95%E9%81%B8%E6%93%87WIN10%20%E5%AE%B6%E7%94%A8%E7%89%88%E6%88%96%E8%80%85%E6%98%AF%E5%B0%88%E6%A5%AD%E7%89%88/</id>
     <published>2019-11-09T00:00:00.000Z</published>
-    <updated>2021-10-31T03:48:09.963Z</updated>
+    <updated>2021-11-12T03:05:27.706Z</updated>
     
-    <content type="html"><![CDATA[<p>電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。</p><h2 id="時程規劃與用途"><a href="#時程規劃與用途" class="headerlink" title="時程規劃與用途"></a>時程規劃與用途</h2><p>首先我講的觀點不一定正確，我們可以把心靜下來做一下斷捨離，拿一張空白紙與一隻筆寫下從現在到未來5年內真正的使用作業系統的用途。用途如為了要打報告、要拿來架伺服器、要拿去公司用、寫程式、跑3D軟體、要可以播放高畫質多媒體等。</p><h2 id="使用者程度分類"><a href="#使用者程度分類" class="headerlink" title="使用者程度分類"></a>使用者程度分類</h2><p>對自己評筆一下，自己使用電腦是屬於那一等級程度，程度是維持狀態還是有在提升程度<br>入門：對電腦只會基本操作及一些應用軟體<br>中階：對電腦除了會基本操作、應用軟體外還理解電腦硬體架構<br>高階：對電腦除了會基本操作還懂的電腦架構、會寫軟體、會電腦系統管理、會架設伺服器</p><h2 id="比較詳細一點如下表格"><a href="#比較詳細一點如下表格" class="headerlink" title="比較詳細一點如下表格"></a>比較詳細一點如下表格</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>程度</td><td>用途</td></tr><tr><td>入門</td><td>文書處理、播放多媒體、瀏覽網頁、玩遊戲、追劇、簡易影片編輯、簡易圖片編輯、Line</td></tr><tr><td>中階</td><td>軟體工程、網頁設計、手機軟體開發、PC軟硬體故障排除、平面設計、3D設計、跑CAD/CAM、電腦系統管理</td></tr><tr><td>高階</td><td>資料庫管理、MIS網路管理、電腦系統管理、雲端伺服器管理、人工AI、網頁伺服管理、檔案伺服器管理、電腦系統整合</td></tr></tbody></table><h2 id="情境故事"><a href="#情境故事" class="headerlink" title="情境故事"></a>情境故事</h2><p>底下是依時程規劃與用途、使用者程度所描述的三個情境故事</p><h3 id="情境一"><a href="#情境一" class="headerlink" title="情境一"></a>情境一</h3><p>小明是一位大一生，科系就讀電腦科學相關科系，現在用電腦是為了打報告寫程式，未來2到3年要學習如何架構伺服器與電腦管理。</p><h3 id="情境二"><a href="#情境二" class="headerlink" title="情境二"></a>情境二</h3><p>小王是一位大一生，科系就讀美髮美容系，現在用電腦是為了追劇、玩遊戲，未來2到3年都做一樣的事。</p><h3 id="情境三"><a href="#情境三" class="headerlink" title="情境三"></a>情境三</h3><p>小玉是一位上班族，工作職位是行政助理，現在用電腦是為了用ERP及常用軟體，未來2到3年都做一樣的事。</p><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上3個情境，小明使用電腦程度是要從入門到高階所以選專業版比較適合，小王是維持入門程度選家用版比較適合，小玉是入門程式但電腦公司會提供給她沒有選擇版本問題。如果不知道怎麼選擇，我會覺得可以依時程規劃與用途、使用者程度是維持或繼續提升、興趣是否喜歡電腦科學做參考。這樣子去選擇版本是會比較會比較好的。最後是簡單描述一下家用版與專業版功能差異。</p><h2 id="比較家用版與專業版功能"><a href="#比較家用版與專業版功能" class="headerlink" title="比較家用版與專業版功能"></a>比較家用版與專業版功能</h2><p>Windows 10系統依用途分為家用版、專業版，兩者產品差異在於使用者資訊安全保護與商務管理和部署這兩項大類別，使用者資訊安全保護差別於家用版沒有<a href="ttps://support.microsoft.com/zh-tw/help/4028713/windows-10-turn-on-device-encryption">BitLocker裝置加密功能</a>、Windows 資訊保護(WIP)則專業版有以上兩者功能，商務管理和部署是公司會用到功能，對電腦是入門者是比較少用到，因為公司必須請IT人員管理電腦、管理員工帳戶和群組、安全性原則，並且依權限存取檔案、使用電腦，家用版沒有商務管理和部署這類別相關功能，比較詳細的功能比較可以參考微軟產品比較網頁。</p><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">作業系統-維基百科</a><br><a href="https://www.microsoft.com/zh-tw/windows/compare-windows-10-home-vs-pro">比較Windows 10 家用版與專業版| Microsoft Windows</a></p>]]></content>
+    <content type="html"><![CDATA[<p>電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。</p><span id="more"></span><h2 id="時程規劃與用途"><a href="#時程規劃與用途" class="headerlink" title="時程規劃與用途"></a>時程規劃與用途</h2><p>首先我講的觀點不一定正確，我們可以把心靜下來做一下斷捨離，拿一張空白紙與一隻筆寫下從現在到未來5年內真正的使用作業系統的用途。用途如為了要打報告、要拿來架伺服器、要拿去公司用、寫程式、跑3D軟體、要可以播放高畫質多媒體等。</p><h2 id="使用者程度分類"><a href="#使用者程度分類" class="headerlink" title="使用者程度分類"></a>使用者程度分類</h2><p>對自己評筆一下，自己使用電腦是屬於那一等級程度，程度是維持狀態還是有在提升程度<br>入門：對電腦只會基本操作及一些應用軟體<br>中階：對電腦除了會基本操作、應用軟體外還理解電腦硬體架構<br>高階：對電腦除了會基本操作還懂的電腦架構、會寫軟體、會電腦系統管理、會架設伺服器</p><h2 id="比較詳細一點如下表格"><a href="#比較詳細一點如下表格" class="headerlink" title="比較詳細一點如下表格"></a>比較詳細一點如下表格</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>程度</td><td>用途</td></tr><tr><td>入門</td><td>文書處理、播放多媒體、瀏覽網頁、玩遊戲、追劇、簡易影片編輯、簡易圖片編輯、Line</td></tr><tr><td>中階</td><td>軟體工程、網頁設計、手機軟體開發、PC軟硬體故障排除、平面設計、3D設計、跑CAD/CAM、電腦系統管理</td></tr><tr><td>高階</td><td>資料庫管理、MIS網路管理、電腦系統管理、雲端伺服器管理、人工AI、網頁伺服管理、檔案伺服器管理、電腦系統整合</td></tr></tbody></table><h2 id="情境故事"><a href="#情境故事" class="headerlink" title="情境故事"></a>情境故事</h2><p>底下是依時程規劃與用途、使用者程度所描述的三個情境故事</p><h3 id="情境一"><a href="#情境一" class="headerlink" title="情境一"></a>情境一</h3><p>小明是一位大一生，科系就讀電腦科學相關科系，現在用電腦是為了打報告寫程式，未來2到3年要學習如何架構伺服器與電腦管理。</p><h3 id="情境二"><a href="#情境二" class="headerlink" title="情境二"></a>情境二</h3><p>小王是一位大一生，科系就讀美髮美容系，現在用電腦是為了追劇、玩遊戲，未來2到3年都做一樣的事。</p><h3 id="情境三"><a href="#情境三" class="headerlink" title="情境三"></a>情境三</h3><p>小玉是一位上班族，工作職位是行政助理，現在用電腦是為了用ERP及常用軟體，未來2到3年都做一樣的事。</p><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上3個情境，小明使用電腦程度是要從入門到高階所以選專業版比較適合，小王是維持入門程度選家用版比較適合，小玉是入門程式但電腦公司會提供給她沒有選擇版本問題。</p><p>如果不知道怎麼選擇，我會覺得可以依時程規劃與用途、使用者程度是維持或繼續提升、興趣是否喜歡電腦科學做參考。這樣子去選擇版本是會比較會比較好的。最後是簡單描述一下家用版與專業版功能差異。</p><h2 id="比較家用版與專業版功能"><a href="#比較家用版與專業版功能" class="headerlink" title="比較家用版與專業版功能"></a>比較家用版與專業版功能</h2><p>Windows 10系統依用途分為家用版、專業版，兩者產品差異在於使用者資訊安全保護與商務管理和部署這兩項大類別。</p><p>使用者資訊安全保護差別於家用版沒有<a href="ttps://support.microsoft.com/zh-tw/help/4028713/windows-10-turn-on-device-encryption">BitLocker裝置加密功能</a>、Windows 資訊保護(WIP)則專業版有以上兩者功能，商務管理和部署是公司會用到功能，對電腦是入門者是比較少用到，因為公司必須請IT人員管理電腦、管理員工帳戶和群組、安全性原則，並且依權限存取檔案、使用電腦，家用版沒有商務管理和部署這類別相關功能，比較詳細的功能比較可以參考微軟產品比較網頁。</p><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">作業系統-維基百科</a><br><a href="https://www.microsoft.com/zh-tw/windows/compare-windows-10-home-vs-pro">比較Windows 10 家用版與專業版| Microsoft Windows</a></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下</summary>
-      
+    <summary type="html">&lt;p&gt;電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。&lt;/p&gt;</summary>
     
     
     
