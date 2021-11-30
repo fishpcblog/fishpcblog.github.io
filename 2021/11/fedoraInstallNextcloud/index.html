@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RS537LJP8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RS537LJP8J');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>如何在Fedora系統上架設nextcloud | 小魚電腦應用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在Fedora系統上架設nextcloud">
+<meta property="og:url" content="https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/index.html">
+<meta property="og:site_name" content="小魚電腦應用">
+<meta property="og:description" content="最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-11-27T23:40:00.000Z">
+<meta property="article:modified_time" content="2021-11-30T10:52:40.832Z">
+<meta property="article:author" content="Joe">
+<meta property="article:tag" content="家裡Fedora的日常">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="小魚電腦應用" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小魚電腦應用</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">自由軟體教學、3C開箱、家裡archlinux的日常</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首頁</a>
+        
+          <a class="main-nav-link" href="/archives">歸檔</a>
+        
+          <a class="main-nav-link" href="/about">關於我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fishpcinfo.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-家裡fedora的日常/fedora架設nextcloud/fedoraInstallNextcloud" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/fedoraInstallNextcloud/" class="article-date">
+  <time class="dt-published" datetime="2021-11-27T23:40:00.000Z" itemprop="datePublished">2021-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Fedora/">Fedora</a>►<a class="article-category-link" href="/categories/Fedora/nextcloud/">nextcloud</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      如何在Fedora系統上架設nextcloud
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。</p>
+<span id="more"></span>
+<h2 id="安裝nextcloud套件"><a href="#安裝nextcloud套件" class="headerlink" title="安裝nextcloud套件"></a>安裝nextcloud套件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install nextcloud</span><br></pre></td></tr></table></figure>
+<h2 id="啓動httpd服務"><a href="#啓動httpd服務" class="headerlink" title="啓動httpd服務"></a>啓動httpd服務</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable httpd.service</span><br><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure>
+<h2 id="安裝mariadb資料庫"><a href="#安裝mariadb資料庫" class="headerlink" title="安裝mariadb資料庫"></a>安裝mariadb資料庫</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install -y mariadb mariadb-server</span><br></pre></td></tr></table></figure>
+<h3 id="建立資料庫帳號"><a href="#建立資料庫帳號" class="headerlink" title="建立資料庫帳號"></a>建立資料庫帳號</h3><p>username要替換成你的使用帳號，password替換成你的密碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &#x27;username&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;password&#x27;;</span><br></pre></td></tr></table></figure>
+<h3 id="建立nextcloud資料庫"><a href="#建立nextcloud資料庫" class="headerlink" title="建立nextcloud資料庫"></a>建立nextcloud資料庫</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</span><br></pre></td></tr></table></figure>
+<h3 id="授予nextcloud資料庫使用權限給使用者"><a href="#授予nextcloud資料庫使用權限給使用者" class="headerlink" title="授予nextcloud資料庫使用權限給使用者"></a>授予nextcloud資料庫使用權限給使用者</h3><p>username要替換成你的使用帳號</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES on nextcloud.* to &#x27;username&#x27;@&#x27;localhost&#x27;;</span><br><span class="line">FLUSH privileges;</span><br></pre></td></tr></table></figure>
+<h3 id="離開mariadb伺服器"><a href="#離開mariadb伺服器" class="headerlink" title="離開mariadb伺服器"></a>離開mariadb伺服器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit;</span><br></pre></td></tr></table></figure>
+<h2 id="建立CAN-INSTALL"><a href="#建立CAN-INSTALL" class="headerlink" title="建立CAN_INSTALL"></a>建立CAN_INSTALL</h2><p>將CAL_INSTALL文字檔建立在/usr/share/nextcloud/config資料夾下</p>
+<h2 id="建立nextcloud管理者帳號"><a href="#建立nextcloud管理者帳號" class="headerlink" title="建立nextcloud管理者帳號"></a>建立nextcloud管理者帳號</h2><p>打開瀏覽器輸入<a target="_blank" rel="noopener" href="http://localhost/nextcloud">http://localhost/nextcloud</a></p>
+<ol>
+<li>輸入管理者帳密</li>
+<li>Data folder 維持預設</li>
+<li>選擇MySQL/MariaDB選項</li>
+<li>輸入剛剛建立的資料庫帳號密碼與資料庫名稱nextcloud</li>
+<li>資料庫主機用localhost</li>
+<li>點擊完成按鈕<h2 id="第一次登入"><a href="#第一次登入" class="headerlink" title="第一次登入"></a>第一次登入</h2>打開瀏覽器輸入<a target="_blank" rel="noopener" href="http://localhost/nextcloud%EF%BC%8C%E8%BC%B8%E5%85%A5nextcloud%E7%AE%A1%E7%90%86%E8%80%85%E5%B8%B3%E8%99%9F%E8%88%87%E5%AF%86%E7%A2%BC">http://localhost/nextcloud，輸入nextcloud管理者帳號與密碼</a></li>
+</ol>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上是我nextcloud架設方法，目前只能在本機電腦連線，如果要在其他電腦開啓nextcloud的話還有firewall與apache相關要設定這些留著寫第二篇文章。</p>
+
+        
+        <!-- likecoin顯示 -->
+        
+          <div>
+如果覺得我的文章不錯，請給個讚吧
+  <script type="text/javascript">
+    document.write(
+      "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/sgitmjoe/button?referrer=" +
+      encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+  </script>
+</div>
+
+
+        
+        <!-- 以上-->
+        
+        
+      
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/" data-id="ckwlzkvl2000q7bijbe1sfg9y" data-title="如何在Fedora系統上架設nextcloud" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" rel="tag">家裡Fedora的日常</a></li></ul>
+
+
+    </footer>
+  </div>
+<!-- 相關文章顯示-->
+  
+   <article class="article">
+  <div class="article-inner">
+    <div class="article-header">
+        <h3 class="article-title" style="font-size: 18px;">相關文章</h3>
+    </div>
+    <div class="article-entry">
+      <p class="related-posts-none">No related post.</p>
+    </div>
+  </div>
+</article>
+
+  
+<!-- 以上-->
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/08/GoogleTemplates/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Google 文件教學-如何免費取得內建範本！！</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/fedoraInstallNextcloud/">如何在Fedora系統上架設nextcloud</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/GoogleTemplates/">Google 文件教學-如何免費取得內建範本！！</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/googleList/">Google 文件教學-看完這篇快速搞定惱人的編號清單！！</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/googleWordArt/">Google 文件教學-如何使用文字藝術師？</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/googlepart/">Google 文件教學-運用三種方法讓你的段落編排更上一層樓</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/" style="font-size: 20px;">Google文件教學</a> <a href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">家裡Fedora的日常</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Joe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/archives" class="mobile-nav-link">歸檔</a>
+  
+    <a href="/about" class="mobile-nav-link">關於我</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

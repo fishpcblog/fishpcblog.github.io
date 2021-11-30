@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小魚電腦應用</title>
   
-  <subtitle>自由軟體教學、3C開箱、家裡Fedora的日常</subtitle>
+  <subtitle>自由軟體教學、3C開箱、家裡archlinux的日常</subtitle>
   <link href="https://fishpcinfo.com/atom.xml" rel="self"/>
   
   <link href="https://fishpcinfo.com/"/>
-  <updated>2021-10-21T02:53:01.922Z</updated>
+  <updated>2021-11-30T10:52:40.832Z</updated>
   <id>https://fishpcinfo.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在Fedora系統上架設nextcloud</title>
+    <link href="https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/"/>
+    <id>https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/</id>
+    <published>2021-11-27T23:40:00.000Z</published>
+    <updated>2021-11-30T10:52:40.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。</p><span id="more"></span><h2 id="安裝nextcloud套件"><a href="#安裝nextcloud套件" class="headerlink" title="安裝nextcloud套件"></a>安裝nextcloud套件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install nextcloud</span><br></pre></td></tr></table></figure><h2 id="啓動httpd服務"><a href="#啓動httpd服務" class="headerlink" title="啓動httpd服務"></a>啓動httpd服務</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable httpd.service</span><br><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure><h2 id="安裝mariadb資料庫"><a href="#安裝mariadb資料庫" class="headerlink" title="安裝mariadb資料庫"></a>安裝mariadb資料庫</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install -y mariadb mariadb-server</span><br></pre></td></tr></table></figure><h3 id="建立資料庫帳號"><a href="#建立資料庫帳號" class="headerlink" title="建立資料庫帳號"></a>建立資料庫帳號</h3><p>username要替換成你的使用帳號，password替換成你的密碼</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &#x27;username&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;password&#x27;;</span><br></pre></td></tr></table></figure><h3 id="建立nextcloud資料庫"><a href="#建立nextcloud資料庫" class="headerlink" title="建立nextcloud資料庫"></a>建立nextcloud資料庫</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</span><br></pre></td></tr></table></figure><h3 id="授予nextcloud資料庫使用權限給使用者"><a href="#授予nextcloud資料庫使用權限給使用者" class="headerlink" title="授予nextcloud資料庫使用權限給使用者"></a>授予nextcloud資料庫使用權限給使用者</h3><p>username要替換成你的使用帳號</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES on nextcloud.* to &#x27;username&#x27;@&#x27;localhost&#x27;;</span><br><span class="line">FLUSH privileges;</span><br></pre></td></tr></table></figure><h3 id="離開mariadb伺服器"><a href="#離開mariadb伺服器" class="headerlink" title="離開mariadb伺服器"></a>離開mariadb伺服器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit;</span><br></pre></td></tr></table></figure><h2 id="建立CAN-INSTALL"><a href="#建立CAN-INSTALL" class="headerlink" title="建立CAN_INSTALL"></a>建立CAN_INSTALL</h2><p>將CAL_INSTALL文字檔建立在/usr/share/nextcloud/config資料夾下</p><h2 id="建立nextcloud管理者帳號"><a href="#建立nextcloud管理者帳號" class="headerlink" title="建立nextcloud管理者帳號"></a>建立nextcloud管理者帳號</h2><p>打開瀏覽器輸入<a href="http://localhost/nextcloud">http://localhost/nextcloud</a></p><ol><li>輸入管理者帳密</li><li>Data folder 維持預設</li><li>選擇MySQL/MariaDB選項</li><li>輸入剛剛建立的資料庫帳號密碼與資料庫名稱nextcloud</li><li>資料庫主機用localhost</li><li>點擊完成按鈕<h2 id="第一次登入"><a href="#第一次登入" class="headerlink" title="第一次登入"></a>第一次登入</h2>打開瀏覽器輸入<a href="http://localhost/nextcloud%EF%BC%8C%E8%BC%B8%E5%85%A5nextcloud%E7%AE%A1%E7%90%86%E8%80%85%E5%B8%B3%E8%99%9F%E8%88%87%E5%AF%86%E7%A2%BC">http://localhost/nextcloud，輸入nextcloud管理者帳號與密碼</a></li></ol><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上是我nextcloud架設方法，目前只能在本機電腦連線，如果要在其他電腦開啓nextcloud的話還有firewall與apache相關要設定這些留著寫第二篇文章。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Fedora" scheme="https://fishpcinfo.com/categories/Fedora/"/>
+    
+    <category term="nextcloud" scheme="https://fishpcinfo.com/categories/Fedora/nextcloud/"/>
+    
+    
+    <category term="家裡Fedora的日常" scheme="https://fishpcinfo.com/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Google 文件教學-如何免費取得內建範本！！</title>
@@ -194,9 +217,9 @@
     <link href="https://fishpcinfo.com/2019/11/win10/"/>
     <id>https://fishpcinfo.com/2019/11/win10/</id>
     <published>2019-11-09T00:00:00.000Z</published>
-    <updated>2021-11-12T03:05:27.706Z</updated>
+    <updated>2021-11-14T11:14:38.184Z</updated>
     
-    <content type="html"><![CDATA[<p>電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。</p><span id="more"></span><h2 id="時程規劃與用途"><a href="#時程規劃與用途" class="headerlink" title="時程規劃與用途"></a>時程規劃與用途</h2><p>首先我講的觀點不一定正確，我們可以把心靜下來做一下斷捨離，拿一張空白紙與一隻筆寫下從現在到未來5年內真正的使用作業系統的用途。用途如為了要打報告、要拿來架伺服器、要拿去公司用、寫程式、跑3D軟體、要可以播放高畫質多媒體等。</p><h2 id="使用者程度分類"><a href="#使用者程度分類" class="headerlink" title="使用者程度分類"></a>使用者程度分類</h2><p>對自己評筆一下，自己使用電腦是屬於那一等級程度，程度是維持狀態還是有在提升程度<br>入門：對電腦只會基本操作及一些應用軟體<br>中階：對電腦除了會基本操作、應用軟體外還理解電腦硬體架構<br>高階：對電腦除了會基本操作還懂的電腦架構、會寫軟體、會電腦系統管理、會架設伺服器</p><h2 id="比較詳細一點如下表格"><a href="#比較詳細一點如下表格" class="headerlink" title="比較詳細一點如下表格"></a>比較詳細一點如下表格</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>程度</td><td>用途</td></tr><tr><td>入門</td><td>文書處理、播放多媒體、瀏覽網頁、玩遊戲、追劇、簡易影片編輯、簡易圖片編輯、Line</td></tr><tr><td>中階</td><td>軟體工程、網頁設計、手機軟體開發、PC軟硬體故障排除、平面設計、3D設計、跑CAD/CAM、電腦系統管理</td></tr><tr><td>高階</td><td>資料庫管理、MIS網路管理、電腦系統管理、雲端伺服器管理、人工AI、網頁伺服管理、檔案伺服器管理、電腦系統整合</td></tr></tbody></table><h2 id="情境故事"><a href="#情境故事" class="headerlink" title="情境故事"></a>情境故事</h2><p>底下是依時程規劃與用途、使用者程度所描述的三個情境故事</p><h3 id="情境一"><a href="#情境一" class="headerlink" title="情境一"></a>情境一</h3><p>小明是一位大一生，科系就讀電腦科學相關科系，現在用電腦是為了打報告寫程式，未來2到3年要學習如何架構伺服器與電腦管理。</p><h3 id="情境二"><a href="#情境二" class="headerlink" title="情境二"></a>情境二</h3><p>小王是一位大一生，科系就讀美髮美容系，現在用電腦是為了追劇、玩遊戲，未來2到3年都做一樣的事。</p><h3 id="情境三"><a href="#情境三" class="headerlink" title="情境三"></a>情境三</h3><p>小玉是一位上班族，工作職位是行政助理，現在用電腦是為了用ERP及常用軟體，未來2到3年都做一樣的事。</p><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上3個情境，小明使用電腦程度是要從入門到高階所以選專業版比較適合，小王是維持入門程度選家用版比較適合，小玉是入門程式但電腦公司會提供給她沒有選擇版本問題。</p><p>如果不知道怎麼選擇，我會覺得可以依時程規劃與用途、使用者程度是維持或繼續提升、興趣是否喜歡電腦科學做參考。這樣子去選擇版本是會比較會比較好的。最後是簡單描述一下家用版與專業版功能差異。</p><h2 id="比較家用版與專業版功能"><a href="#比較家用版與專業版功能" class="headerlink" title="比較家用版與專業版功能"></a>比較家用版與專業版功能</h2><p>Windows 10系統依用途分為家用版、專業版，兩者產品差異在於使用者資訊安全保護與商務管理和部署這兩項大類別。</p><p>使用者資訊安全保護差別於家用版沒有<a href="ttps://support.microsoft.com/zh-tw/help/4028713/windows-10-turn-on-device-encryption">BitLocker裝置加密功能</a>、Windows 資訊保護(WIP)則專業版有以上兩者功能，商務管理和部署是公司會用到功能，對電腦是入門者是比較少用到，因為公司必須請IT人員管理電腦、管理員工帳戶和群組、安全性原則，並且依權限存取檔案、使用電腦，家用版沒有商務管理和部署這類別相關功能，比較詳細的功能比較可以參考微軟產品比較網頁。</p><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">作業系統-維基百科</a><br><a href="https://www.microsoft.com/zh-tw/windows/compare-windows-10-home-vs-pro">比較Windows 10 家用版與專業版| Microsoft Windows</a></p>]]></content>
+    <content type="html"><![CDATA[<p>電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。</p><span id="more"></span><h2 id="時程規劃與用途"><a href="#時程規劃與用途" class="headerlink" title="時程規劃與用途"></a>時程規劃與用途</h2><p>首先我講的觀點不一定正確，我們可以把心靜下來做一下斷捨離，拿一張空白紙與一隻筆寫下從現在到未來5年內真正的使用作業系統的用途。用途如為了要打報告、要拿來架伺服器、要拿去公司用、寫程式、跑3D軟體、要可以播放高畫質多媒體等。</p><h2 id="使用者程度分類"><a href="#使用者程度分類" class="headerlink" title="使用者程度分類"></a>使用者程度分類</h2><p>對自己評筆一下，自己使用電腦是屬於那一等級程度，程度是維持狀態還是有在提升程度<br>入門：對電腦只會基本操作及一些應用軟體<br>中階：對電腦除了會基本操作、應用軟體外還理解電腦硬體架構<br>高階：對電腦除了會基本操作還懂的電腦架構、會寫軟體、會電腦系統管理、會架設伺服器</p><h2 id="比較詳細一點如下表格"><a href="#比較詳細一點如下表格" class="headerlink" title="比較詳細一點如下表格"></a>比較詳細一點如下表格</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>程度</td><td>用途</td></tr><tr><td>入門</td><td>文書處理、播放多媒體、瀏覽網頁、玩遊戲、追劇、簡易影片編輯、簡易圖片編輯、Line</td></tr><tr><td>中階</td><td>軟體工程、網頁設計、手機軟體開發、PC軟硬體故障排除、平面設計、3D設計、跑CAD/CAM、電腦系統管理</td></tr><tr><td>高階</td><td>資料庫管理、MIS網路管理、電腦系統管理、雲端伺服器管理、人工AI、網頁伺服管理、檔案伺服器管理、電腦系統整合</td></tr></tbody></table><h2 id="情境故事"><a href="#情境故事" class="headerlink" title="情境故事"></a>情境故事</h2><p>底下是依時程規劃與用途、使用者程度所描述的三個情境故事</p><h3 id="情境一"><a href="#情境一" class="headerlink" title="情境一"></a>情境一</h3><p>小明是一位大一生，科系就讀電腦科學相關科系，現在用電腦是為了打報告寫程式，未來2到3年要學習如何架構伺服器與電腦管理。</p><h3 id="情境二"><a href="#情境二" class="headerlink" title="情境二"></a>情境二</h3><p>小王是一位大一生，科系就讀美髮美容系，現在用電腦是為了追劇、玩遊戲，未來2到3年都做一樣的事。</p><h3 id="情境三"><a href="#情境三" class="headerlink" title="情境三"></a>情境三</h3><p>小玉是一位上班族，工作職位是行政助理，現在用電腦是為了用ERP及常用軟體，未來2到3年都做一樣的事。</p><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上3個情境，小明使用電腦程度是要從入門到高階所以選專業版比較適合，小王是維持入門程度選家用版比較適合，小玉是入門程式但電腦公司會提供給她沒有選擇版本問題。</p><p>如果不知道怎麼選擇，我會覺得可以依時程規劃與用途、使用者程度是維持或繼續提升、興趣是否喜歡電腦科學做參考。這樣子去選擇版本是會比較會比較好的。最後是簡單描述一下家用版與專業版功能差異。</p><h2 id="比較家用版與專業版功能"><a href="#比較家用版與專業版功能" class="headerlink" title="比較家用版與專業版功能"></a>比較家用版與專業版功能</h2><p>Windows 10系統依用途分為家用版、專業版，兩者產品差異在於使用者資訊安全保護與商務管理和部署這兩項大類別，在使用者資訊安全保護類別差別於家用版沒有<a href="ttps://support.microsoft.com/zh-tw/help/4028713/windows-10-turn-on-device-encryption">BitLocker裝置加密功能</a>、Windows 資訊保護(WIP)則專業版有以上兩者功能，商務管理和部署是公司會用到功能，對電腦是入門者是比較少用到，因為公司必須請IT人員管理電腦、管理員工帳戶和群組、安全性原則，並且依權限存取檔案、使用電腦，家用版沒有商務管理和部署這類別相關功能，比較詳細的功能比較可以參考微軟產品比較網頁。</p><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">作業系統-維基百科</a><br><a href="https://www.microsoft.com/zh-tw/windows/compare-windows-10-home-vs-pro">比較Windows 10 家用版與專業版| Microsoft Windows</a></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;電腦配單完成接下來就是選擇作業系統了，什麼是作業系統？作業系統是管理電腦硬體與軟體資源的系統軟體[1]。作業系統分為閉源作業系統如微軟與開源作業系統(GNU\Linux)，本篇要講的是微軟作業系統，微軟作業系統分很多版本，大部人都知道是家用版、專業版。那可以選家用版嗎？接下來就是今天的主題了Let’s Go。&lt;/p&gt;</summary>
