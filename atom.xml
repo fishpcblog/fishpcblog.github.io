@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小魚電腦應用</title>
   
-  <subtitle>自由軟體教學、3C開箱、家裡archlinux的日常</subtitle>
+  <subtitle>自由軟體教學、3C開箱、家裡Fedora的日常</subtitle>
   <link href="https://fishpcinfo.com/atom.xml" rel="self"/>
   
   <link href="https://fishpcinfo.com/"/>
