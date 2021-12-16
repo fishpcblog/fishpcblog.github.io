@@ -25,7 +25,7 @@
 <meta property="og:description" content="最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcloud真是太好了,本文是記錄我安裝nextcloud過程。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-11-27T23:40:00.000Z">
-<meta property="article:modified_time" content="2021-12-08T04:25:46.887Z">
+<meta property="article:modified_time" content="2021-12-16T10:38:59.464Z">
 <meta property="article:author" content="Joe">
 <meta property="article:tag" content="家裡Fedora的日常">
 <meta name="twitter:card" content="summary">
@@ -133,6 +133,7 @@
 <h3 id="授予nextcloud資料庫使用權限給使用者"><a href="#授予nextcloud資料庫使用權限給使用者" class="headerlink" title="授予nextcloud資料庫使用權限給使用者"></a>授予nextcloud資料庫使用權限給使用者</h3><p>username要替換成你的使用帳號</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES on nextcloud.* to &#x27;username&#x27;@&#x27;localhost&#x27;;</span><br><span class="line">FLUSH privileges;</span><br></pre></td></tr></table></figure>
 <h3 id="離開mariadb伺服器"><a href="#離開mariadb伺服器" class="headerlink" title="離開mariadb伺服器"></a>離開mariadb伺服器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit;</span><br></pre></td></tr></table></figure>
+<h3 id="SELinux配置"><a href="#SELinux配置" class="headerlink" title="SELinux配置"></a>SELinux配置</h3><p>這部份可以參考<a target="_blank" rel="noopener" href="https://fishpcinfocom/2021/12/SELinuxconfiguration/">這篇文章</a></p>
 <h2 id="建立CAN-INSTALL"><a href="#建立CAN-INSTALL" class="headerlink" title="建立CAN_INSTALL"></a>建立CAN_INSTALL</h2><p>將CAN_INSTALL文字檔建立在/usr/share/nextcloud/config資料夾下</p>
 <h2 id="建立nextcloud管理者帳號"><a href="#建立nextcloud管理者帳號" class="headerlink" title="建立nextcloud管理者帳號"></a>建立nextcloud管理者帳號</h2><p>打開瀏覽器輸入<a target="_blank" rel="noopener" href="http://localhost/nextcloud">http://localhost/nextcloud</a></p>
 <ol>
@@ -151,7 +152,7 @@
         <!-- likecoin顯示 -->
         
           <div>
-如果覺得我的文章不錯，請給個拍手吧
+如果覺得我的文章有幫到你，請給個拍手我會很感謝你的。
   <script type="text/javascript">
     document.write(
       "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/sgitmjoe/button?referrer=" +
@@ -168,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/" data-id="ckwx14sm2000qxkbg3erv1bsz" data-title="如何在Fedora系統上安裝nextcloud" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/" data-id="ckx8uzqol000tx3bg608sacjz" data-title="如何在Fedora系統上安裝nextcloud" class="article-share-link">分享</a>
       
       
       
@@ -185,7 +186,7 @@
         <h3 class="article-title" style="font-size: 18px;">相關文章</h3>
     </div>
     <div class="article-entry">
-      <ul class="related-posts"><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a><div class="related-posts-item-abstract">之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有
+      <ul class="related-posts"><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a><div class="related-posts-item-abstract">最近我在使用NextCloud遇到了點進去應用程式商店頁面無法顯示常用的行事曆、任務、專案管理這些應用程式來安裝，這是因爲使用紅帽系的發行版預設都會安裝SELinux軟體來提高系統安全性所以因爲權限關係會擋住NextCl</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a><div class="related-posts-item-abstract">之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有
 
 
 firewall(防火牆)
@@ -235,6 +236,10 @@ N</div></li></ul>
       <ul>
         
           <li>
+            <a href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a>
+          </li>
+        
+          <li>
             <a href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a>
           </li>
         
@@ -250,10 +255,6 @@ N</div></li></ul>
             <a href="/2021/07/googleList/">Google 文件教學-看完這篇快速搞定惱人的編號清單！！</a>
           </li>
         
-          <li>
-            <a href="/2021/07/googleWordArt/">Google 文件教學-如何使用文字藝術師？</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -263,7 +264,7 @@ N</div></li></ul>
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
