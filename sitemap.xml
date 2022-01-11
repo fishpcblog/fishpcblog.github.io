@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fishpcinfo.com/2022/01/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%A6%82%E4%BD%95%E9%96%8B%E5%95%93%E5%8D%94%E4%BD%9C%E5%8A%9F%E8%83%BD/</loc>
+    
+    <lastmod>2022-01-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fishpcinfo.com/2021/12/SELinuxconfiguration/</loc>
     
     <lastmod>2021-12-16</lastmod>
@@ -102,7 +109,7 @@
 
   <url>
     <loc>https://fishpcinfo.com/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,14 +117,14 @@
   
   <url>
     <loc>https://fishpcinfo.com/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,35 +133,35 @@
   
   <url>
     <loc>https://fishpcinfo.com/categories/GoogleCloudService/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/nextcloud/</loc>
-    <lastmod>2021-12-16</lastmod>
+    <lastmod>2022-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
