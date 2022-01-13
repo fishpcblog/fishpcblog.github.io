@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RS537LJP8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RS537LJP8J');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>如何開放其他台電腦連線到Nextcloud伺服器 | 小魚電腦應用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何開放其他台電腦連線到Nextcloud伺服器">
+<meta property="og:url" content="https://fishpcinfo.com/2021/12/PcLinkNextCloud/index.html">
+<meta property="og:site_name" content="小魚電腦應用">
+<meta property="og:description" content="之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-12-07T12:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-08T04:19:52.962Z">
+<meta property="article:author" content="Joe">
+<meta property="article:tag" content="家裡Fedora的日常">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="小魚電腦應用" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小魚電腦應用</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Google雲端服務教學、3C開箱、家裡Fedora的日常</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首頁</a>
+        
+          <a class="main-nav-link" href="/archives">歸檔</a>
+        
+          <a class="main-nav-link" href="/about">關於我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fishpcinfo.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-家裡fedora的日常/如何開放其他台電腦連線Nextcloud伺服器/PcLinkNextCloud" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/PcLinkNextCloud/" class="article-date">
+  <time class="dt-published" datetime="2021-12-07T12:00:00.000Z" itemprop="datePublished">2021-12-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Fedora/">Fedora</a>►<a class="article-category-link" href="/categories/Fedora/nextcloud/">nextcloud</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      如何開放其他台電腦連線到Nextcloud伺服器
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有</p>
+<span id="more"></span>
+<ul>
+<li>firewall(防火牆)</li>
+<li>Apache HTTP服務器的NextCloud網站設定文件</li>
+<li>NextCloud配置文件。</li>
+</ul>
+<h2 id="請防火牆開放80port"><a href="#請防火牆開放80port" class="headerlink" title="請防火牆開放80port"></a>請防火牆開放80port</h2><p>這邊簡單介紹firewall常用指令</p>
+<h3 id="顯示系統目前所有zone-區域-與詳細訊息"><a href="#顯示系統目前所有zone-區域-與詳細訊息" class="headerlink" title="顯示系統目前所有zone(區域)與詳細訊息"></a>顯示系統目前所有zone(區域)與詳細訊息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all-zones</span><br></pre></td></tr></table></figure>
+<h3 id="顯示系統目前所使用zone-區域"><a href="#顯示系統目前所使用zone-區域" class="headerlink" title="顯示系統目前所使用zone(區域)"></a>顯示系統目前所使用zone(區域)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --get-zones</span><br></pre></td></tr></table></figure>
+<h3 id="顯示系統內建服務名稱"><a href="#顯示系統內建服務名稱" class="headerlink" title="顯示系統內建服務名稱"></a>顯示系統內建服務名稱</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --get-services</span><br></pre></td></tr></table></figure>
+<h3 id="暫時把http服務增加到FedoraWorkstation區域"><a href="#暫時把http服務增加到FedoraWorkstation區域" class="headerlink" title="暫時把http服務增加到FedoraWorkstation區域"></a>暫時把http服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=http</span><br></pre></td></tr></table></figure>
+<h3 id="永久把http服務增加到FedoraWorkstation區域"><a href="#永久把http服務增加到FedoraWorkstation區域" class="headerlink" title="永久把http服務增加到FedoraWorkstation區域"></a>永久把http服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=http --permanent</span><br></pre></td></tr></table></figure>
+<h3 id="從FedoraWorkstation區域移除http服務"><a href="#從FedoraWorkstation區域移除http服務" class="headerlink" title="從FedoraWorkstation區域移除http服務"></a>從FedoraWorkstation區域移除http服務</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --remove-service=http</span><br></pre></td></tr></table></figure>
+<h3 id="永久從FedoraWorkstation區域移除http服務"><a href="#永久從FedoraWorkstation區域移除http服務" class="headerlink" title="永久從FedoraWorkstation區域移除http服務"></a>永久從FedoraWorkstation區域移除http服務</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --remove-service=http --paymanent</span><br></pre></td></tr></table></figure>
+<p>以上是常用防火牆指令，那只要把http服務永久增加到FedoraWorkstation區域就可以了。那暫時增加指令的話是作爲測試用途重開機設定就不見了，所以測試完後一定要用永久加入指令然後<strong>重開機</strong>才能永久生效。</p>
+<h3 id="暫時把http服務增加到FedoraWorkstation區域-1"><a href="#暫時把http服務增加到FedoraWorkstation區域-1" class="headerlink" title="暫時把http服務增加到FedoraWorkstation區域"></a>暫時把http服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=http</span><br></pre></td></tr></table></figure>
+<h3 id="永久把http服務增加到FedoraWorkstation區域-1"><a href="#永久把http服務增加到FedoraWorkstation區域-1" class="headerlink" title="永久把http服務增加到FedoraWorkstation區域"></a>永久把http服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=http --permanent</span><br></pre></td></tr></table></figure>
+<p>那如果網站有SSL話也要把https永久加入FedoraWorkstation哦。</p>
+<h3 id="暫時把https服務增加到FedoraWorkstation區域"><a href="#暫時把https服務增加到FedoraWorkstation區域" class="headerlink" title="暫時把https服務增加到FedoraWorkstation區域"></a>暫時把https服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=https</span><br></pre></td></tr></table></figure>
+<h3 id="永久把https服務增加到FedoraWorkstation區域"><a href="#永久把https服務增加到FedoraWorkstation區域" class="headerlink" title="永久把https服務增加到FedoraWorkstation區域"></a>永久把https服務增加到FedoraWorkstation區域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --zone=FedoraWorkstation --add-service=https --permanent</span><br></pre></td></tr></table></figure>
+<h2 id="NextCloud網站設定文件"><a href="#NextCloud網站設定文件" class="headerlink" title="NextCloud網站設定文件"></a>NextCloud網站設定文件</h2><p>如果你是Fedora系統的話HTTP服務器的設定文件位置在於/etc/httpd/conf.d資料夾裡面。</p>
+<h3 id="NextCloud權限配置文件"><a href="#NextCloud權限配置文件" class="headerlink" title="NextCloud權限配置文件"></a>NextCloud權限配置文件</h3><p>如果你是從Fedora套件庫安裝NextCloud套件的話於/etc/httpd/conf.d資料夾裡面會多出以下這些檔案</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/etc/httpd/conf.d/nextcloud-access.conf.avail</span><br><span class="line">/etc/httpd/conf.d/nextcloud-auth-any.inc</span><br><span class="line">/etc/httpd/conf.d/nextcloud-auth-local.inc</span><br><span class="line">/etc/httpd/conf.d/nextcloud-auth-none.inc</span><br><span class="line">/etc/httpd/conf.d/nextcloud-defaults.inc</span><br><span class="line">/etc/httpd/conf.d/nextcloud.conf</span><br><span class="line">/etc/php-fpm.d/nextcloud.conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>那我們開啓nextcloud.conf檔來設定目錄權限，將第二行的Include conf.d/nextcloud-auth-local.inc改成Include conf.d/nextcloud-auth-any.inc就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /usr/share/nextcloud/&gt;</span><br><span class="line">    Include conf.d/nextcloud-auth-any.inc</span><br><span class="line">    Include conf.d/nextcloud-defaults.inc</span><br><span class="line">    &lt;FilesMatch ^(\.|autotest|occ|issue|indie|db_|console).*&gt;</span><br><span class="line">        Include conf.d/nextcloud-auth-none.inc</span><br><span class="line">    &lt;/FilesMatch&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="NextCloud配置文件"><a href="#NextCloud配置文件" class="headerlink" title="NextCloud配置文件"></a>NextCloud配置文件</h2><h3 id="加入信任網域"><a href="#加入信任網域" class="headerlink" title="加入信任網域"></a>加入信任網域</h3><p>輸入以下指令打開config.php檔</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/share/nextcloud/config/config.php</span><br></pre></td></tr></table></figure>
+<p>找到trusted_domains那行然後請依照格式加入你的本機ip，如192.168.0.117。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x27;trusted_domains&#x27; =&gt;</span><br><span class="line">  array (</span><br><span class="line">          0 =&gt; &#x27;localhost&#x27;,</span><br><span class="line">          1 =&gt; &#x27;192.168.0.117&#x27;,</span><br><span class="line">  ),</span><br></pre></td></tr></table></figure>
+<p>經過這三部份防火牆、NextCloud網站設定檔、NextCloud設定檔的設定大家是不是都可以讓其他台電腦連上NextCloud 伺服器了。</p>
+
+        
+        <!-- likecoin顯示 -->
+        
+          <div>
+如果覺得我的文章有幫到你，請給個拍手我會很感謝你的。
+  <script type="text/javascript">
+    document.write(
+      "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/sgitmjoe/button?referrer=" +
+      encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+  </script>
+</div>
+
+
+        
+        <!-- 以上-->
+        
+        
+      
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fishpcinfo.com/2021/12/PcLinkNextCloud/" data-id="ckycuk8rh0015sxbghh5y11n9" data-title="如何開放其他台電腦連線到Nextcloud伺服器" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" rel="tag">家裡Fedora的日常</a></li></ul>
+
+
+    </footer>
+  </div>
+<!-- 相關文章顯示-->
+  
+   <article class="article">
+  <div class="article-inner">
+    <div class="article-header">
+        <h3 class="article-title" style="font-size: 18px;">相關文章</h3>
+    </div>
+    <div class="article-entry">
+      <ul class="related-posts"><li class="related-posts-item"><a class="related-posts-link" href="/2022/01/如何解決flathub public-key-not-found-問題/">如何解決flathub Can't check signature: public key not found 問題</a><div class="related-posts-item-abstract">這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a><div class="related-posts-item-abstract">最近我在使用NextCloud遇到了點進去應用程式商店頁面無法顯示常用的行事曆、任務、專案管理這些應用程式來安裝，這是因爲使用紅帽系的發行版預設都會安裝SELinux軟體來提高系統安全性所以因爲權限關係會擋住NextCl</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/11/fedoraInstallNextcloud/">如何在Fedora系統上安裝nextcloud</a><div class="related-posts-item-abstract">最近我家裡有安裝nextcloud需求，可是我看了官網的安裝說明文件還是眸眸懂懂的，經過幾天的消化與發現其實fedora的套件庫已經有nextcloud套件了，對於我這樣的新手可以用簡單幾個步驟快速在家裡架設nextcl</div></li></ul>
+    </div>
+  </div>
+</article>
+
+  
+<!-- 以上-->
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/SELinuxconfiguration/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          如何配置SELinux組態
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/fedoraInstallNextcloud/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">如何在Fedora系統上安裝nextcloud</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/">如何解決flathub Can&#39;t check signature: public key not found 問題</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/GoogleDocOpenShare/">Google 文件教學-如何開啓協作功能</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/fedoraInstallNextcloud/">如何在Fedora系統上安裝nextcloud</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/Flatpak/">Flatpak</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/" style="font-size: 20px;">Google文件教學</a> <a href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">家裡Fedora的日常</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Joe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/archives" class="mobile-nav-link">歸檔</a>
+  
+    <a href="/about" class="mobile-nav-link">關於我</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
