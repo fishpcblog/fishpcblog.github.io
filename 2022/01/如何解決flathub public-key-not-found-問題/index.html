@@ -17,16 +17,16 @@
   
   <title>如何解決flathub Can&#39;t check signature: public key not found 問題 | 小魚電腦應用</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過了隔一天，自己在獨處時心裡想我真的有基本瞭解flatpk嗎？嗯~原來我還不了解，因此我開啓終端機輸入 1flatpak --help 我去了解Manage remote repo">
+  <meta name="description" content="這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過了隔一天，自己在獨處時心裡想我真的有基本瞭解flatpk嗎？嗯~原來我還不了解，因此我開啓終端機輸入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何解決flathub Can&#39;t check signature: public key not found 問題">
 <meta property="og:url" content="https://fishpcinfo.com/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/index.html">
 <meta property="og:site_name" content="小魚電腦應用">
-<meta property="og:description" content="這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過了隔一天，自己在獨處時心裡想我真的有基本瞭解flatpk嗎？嗯~原來我還不了解，因此我開啓終端機輸入 1flatpak --help 我去了解Manage remote repo">
+<meta property="og:description" content="這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過了隔一天，自己在獨處時心裡想我真的有基本瞭解flatpk嗎？嗯~原來我還不了解，因此我開啓終端機輸入">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/fishpcblog.appspot.com/o/%E5%AE%B6%E8%A3%A1Fedora%E6%97%A5%E5%B8%B8%2F%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public%20key%20not%20found%20%E5%95%8F%E9%A1%8C%2Fpublic%20key%20not%20found.png?alt=media&token=1271f1cd-a6c3-44bf-9cc5-44dc51ea39e6">
 <meta property="article:published_time" content="2022-01-13T10:11:23.000Z">
-<meta property="article:modified_time" content="2022-01-13T10:42:34.966Z">
+<meta property="article:modified_time" content="2022-02-20T03:07:36.924Z">
 <meta property="article:author" content="Joe">
 <meta property="article:tag" content="家裡Fedora的日常">
 <meta name="twitter:card" content="summary">
@@ -120,6 +120,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>這幾天我在cinnamon桌面環境裡要啓用flatpk時遇到了public key not found，起初我以爲可以在Google search 上找到答案，最後我還是沒找到答案，我只有找到別人在網上發問這個問題。<br>事情過了隔一天，自己在獨處時心裡想我真的有基本瞭解flatpk嗎？嗯~原來我還不了解<br>，因此我開啓終端機輸入</p>
+<span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak --help</span><br></pre></td></tr></table></figure>
 <p>我去了解Manage remote repositories 相關指令，基本上可以對remote repositories新增、修改、刪除、顯示。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Manage remote repositories</span><br><span class="line">  remotes                List all configured remotes(顯示全部遠端倉庫配置)</span><br><span class="line">  remote-add             Add a new remote repository (by URL)(新增一個遠端倉庫配置)</span><br><span class="line">  remote-modify          Modify properties of a configured remote(修改一個遠端倉庫配置)</span><br><span class="line">  remote-delete          Delete a configured remote (刪除一個遠端倉庫配置)</span><br><span class="line">  remote-ls              List contents of a configured remote (列出一個遠端倉庫配置的內容)</span><br><span class="line">  remote-info            Show information about a remote app or runtime(顯示遠程app或運行的訊息)</span><br></pre></td></tr></table></figure>
@@ -154,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/" data-id="ckycuk8rf0011sxbg4m1o7k1f" data-title="如何解決flathub Can&#39;t check signature: public key not found 問題" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/" data-id="ckzupqa300015akbg50xtdewj" data-title="如何解決flathub Can&#39;t check signature: public key not found 問題" class="article-share-link">分享</a>
       
       
       
@@ -187,6 +188,15 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
     
 <nav id="article-nav">
   
+    <a href="/2022/02/iphoneChargerCable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          我買iphone充電線時沒考慮的事項
+        
+      </div>
+    </a>
+  
   
     <a href="/2022/01/GoogleDocOpenShare/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
@@ -200,6 +210,28 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
 </article>
 
 
+<section id="comments">
+ <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://fishpcinfo.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
 
 </section>
         
@@ -210,6 +242,10 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/02/iphoneChargerCable/">我買iphone充電線時沒考慮的事項</a>
+          </li>
         
           <li>
             <a href="/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/">如何解決flathub Can&#39;t check signature: public key not found 問題</a>
@@ -227,10 +263,6 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
             <a href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a>
           </li>
         
-          <li>
-            <a href="/2021/11/fedoraInstallNextcloud/">如何在Fedora系統上安裝nextcloud</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -240,7 +272,7 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/Flatpak/">Flatpak</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/">3C開箱</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/iphone/">iphone</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/Flatpak/">Flatpak</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -250,7 +282,7 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/" style="font-size: 20px;">Google文件教學</a> <a href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">家裡Fedora的日常</a>
+      <a href="/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/" style="font-size: 20px;">Google文件教學</a> <a href="/tags/iphone%E5%85%85%E9%9B%BB%E7%B7%9A/" style="font-size: 10px;">iphone充電線</a> <a href="/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">家裡Fedora的日常</a>
     </div>
   </div>
 
