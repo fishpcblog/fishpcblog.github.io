@@ -202,14 +202,14 @@
   </url>
   
   <url>
-    <loc>https://fishpcinfo.com/categories/Fedora/Flatpak/</loc>
+    <loc>https://fishpcinfo.com/categories/Fedora/nextcloud/</loc>
     <lastmod>2022-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://fishpcinfo.com/categories/Fedora/nextcloud/</loc>
+    <loc>https://fishpcinfo.com/categories/Fedora/Flatpak/</loc>
     <lastmod>2022-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
