@@ -15,17 +15,17 @@
 <!-- End Google Analytics -->
 
   
-  <title>安裝Windows 10與Fedora 35雙系統會遇到那些問題呢？ | 小魚電腦應用</title>
+  <title>如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題 | 小魚電腦應用</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="這篇不是什麼很詳細的GPT Windows與Fedora雙系統安裝教學文章，這篇是我安裝雙系統筆記及安裝過程時所遇到的問題與解決方法。 爲什麼要重新安裝系統">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安裝Windows 10與Fedora 35雙系統會遇到那些問題呢？">
+<meta property="og:title" content="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題">
 <meta property="og:url" content="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora%20/index.html">
 <meta property="og:site_name" content="小魚電腦應用">
 <meta property="og:description" content="這篇不是什麼很詳細的GPT Windows與Fedora雙系統安裝教學文章，這篇是我安裝雙系統筆記及安裝過程時所遇到的問題與解決方法。 爲什麼要重新安裝系統">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-02-25T04:37:52.000Z">
-<meta property="article:modified_time" content="2022-03-15T12:12:12.437Z">
+<meta property="article:modified_time" content="2022-03-19T02:38:09.133Z">
 <meta property="article:author" content="Joe">
 <meta property="article:tag" content="家裡Fedora的日常">
 <meta name="twitter:card" content="summary">
@@ -93,7 +93,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-家裡fedora的日常/安裝Windows10與Fedora35雙系統會遇到那些問題？/QuestionForInstallWindows10AndFedora " class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-家裡fedora的日常/如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題/QuestionForInstallWindows10AndFedora " class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/QuestionForInstallWindows10AndFedora%20/" class="article-date">
   <time class="dt-published" datetime="2022-02-25T04:37:52.000Z" itemprop="datePublished">2022-02-25</time>
@@ -111,7 +111,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      安裝Windows 10與Fedora 35雙系統會遇到那些問題呢？
+      如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題
     </h1>
   
 
@@ -187,8 +187,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="安裝心得"><a href="#安裝心得" class="headerlink" title="安裝心得"></a>安裝心得</h2><p>我之前磁碟分割軟體用gparted，那gparted是用GUI界面很適合新手滑鼠操作而且它支援GPT除了基本功能外還有進階功能如：對已分割好的分割區重新調整容量大小,複製分割區，移動分割區、格式化分割區等，它的詳細特色嘛可以連接<a target="_blank" rel="noopener" href="https://gparted.org/">gparted</a>網站有詳細介紹，我就不再一一介紹了。</p>
-<p>這次我改用gdisk,這套gdisk採用對話式指令操作，從執行gdisk軟體到重新建GPT、新增分割區、改變分割區類型，到寫入分割表，全部操作相當簡單明瞭，整個時間花費不到5分鍾就完成了，不過gdisk還不支援格式化分割區，所以要另外學mkfs系列指令來做格式化分割區(其實mkfs系列指令我知道怎麼用了)，總結來說我想下次安裝系統我就會用gdisk搭配mkfs系列指令來用了(指令控來了~)。</p>
+<h2 id="安裝心得"><a href="#安裝心得" class="headerlink" title="安裝心得"></a>安裝心得</h2><p>我之前磁碟分割軟體用gparted，那gparted是用GUI界面很適合新手滑鼠操作而且它支援GPT，除了基本功能外還有進階功能如：對已分割好的分割區重新調整容量大小,複製分割區，移動分割區、格式化分割區等，它的詳細特色嘛可以連接<a target="_blank" rel="noopener" href="https://gparted.org/">gparted</a>網站有詳細介紹，我就不再一一介紹了。</p>
+<p>這次我改用gdisk,這套gdisk採用對話式指令操作而且這很重要很重要它是支援GPT，從執行gdisk軟體到重新建GPT、新增分割區、改變分割區類型，到寫入分割表，全部操作相當簡單明瞭。<br>整個時間花費不到5分鍾就完成了，不過gdisk還不支援格式化分割區，所以要另外學mkfs系列指令來做格式化分割區(其實mkfs系列指令我知道怎麼用了)，總結來說我想下次安裝系統我就會用gdisk搭配mkfs系列指令來用了(指令控來了~)。</p>
 <p>現在Fedora35安裝程式做的很簡單操作，整個安裝流程有歸納出要使用者設定放在前半段那後半段就專心跑安裝，安裝好約30分鍾使用者就只需要重開機，前半段使用者設定好其實就可以去買消夜回來慶祝了Fedora35安裝完成了(開心~~~)。<br>那有些系統安裝程式，安裝流程就是使用者設定、跑系統安裝程式、使用者設定、跑系統安裝程式。</p>
 <h2 id="如何解決Windows10-Fedora-uefi-雙系統安裝時遇到問題"><a href="#如何解決Windows10-Fedora-uefi-雙系統安裝時遇到問題" class="headerlink" title="如何解決Windows10 Fedora uefi 雙系統安裝時遇到問題"></a>如何解決Windows10 Fedora uefi 雙系統安裝時遇到問題</h2><h3 id="我用Windows10開機碟安裝時出現電腦所需的媒體驅動程式遺失，這可能是DVD、USB、硬碟驅動程式。"><a href="#我用Windows10開機碟安裝時出現電腦所需的媒體驅動程式遺失，這可能是DVD、USB、硬碟驅動程式。" class="headerlink" title="我用Windows10開機碟安裝時出現電腦所需的媒體驅動程式遺失，這可能是DVD、USB、硬碟驅動程式。"></a>我用Windows10開機碟安裝時出現電腦所需的媒體驅動程式遺失，這可能是DVD、USB、硬碟驅動程式。</h3><ul>
 <li>原先以爲是開機碟沒做好所以重做，重試也是一樣問題。</li>
@@ -200,7 +200,7 @@
 <li>anaconda安裝程式正在讀取電腦上全部硬碟(我的桌電電腦上有一顆2T，2顆一T做radio 1)資訊，可能會比較慢?</li>
 <li>在我的電腦運作anaconda安裝程式是不是有bug？anaconda安裝程式是不是有log檔可以查？</li>
 </ol>
-<p>我去google搜尋anaconda的log介紹與log檔路徑，有在<a target="_blank" rel="noopener" href="https://docs.fedoraproject.org/en-US/quick-docs/anaconda/anaconda_logging/">Fedora Docs網站</a>找到也有詳細的介紹，跟我有關的是/tmp/storage.log,這個是存儲設備檢測與操作的log檔，我打開來看最後幾行，我發現停在/dev/md/DATA_RAID_0p1的RAID0硬碟。我想是不是2顆1T硬碟有問題，這邊我先不考慮2顆1T硬碟問題，我先關機把2顆1T硬碟電源線拔了，再一次用Fedora35 cinnamon開機碟進入live 系統，我執行安裝程式結果到了要選系統目標位置就很快速讀到要安裝的硬碟且可進入硬碟組態頁面設定，之後就順利安裝完Fedora35 cinnamon了。這邊我有一個小建議就是如果安裝程式在遲遲無法點進系統目標位置頁面，那電腦就保留要安裝的系統硬碟，其他的資料硬碟包含隨身硬碟可以先關機移除，這樣會比較快一點哦。</p>
+<p>我去google搜尋anaconda的log介紹與log檔路徑，有在<a target="_blank" rel="noopener" href="https://docs.fedoraproject.org/en-US/quick-docs/anaconda/anaconda_logging/">Fedora Docs網站</a>找到也有詳細的介紹，跟我有關的是/tmp/storage.log,這個是存儲設備檢測與操作的log檔，我打開來看最後幾行，我發現停在/dev/md/DATA_RAID_0p1的RAID0硬碟。<br>我想是不是2顆1T硬碟有問題，這邊我先不考慮2顆1T硬碟問題，我先關機把2顆1T硬碟電源線拔了，再一次用Fedora35 cinnamon開機碟進入live 系統，我執行安裝程式到了要選系統目標位置就很快速讀到要安裝的硬碟且可進入硬碟組態頁面設定，之後就順利安裝完Fedora35 cinnamon了。<br>這邊我有一個小建議就是如果安裝程式在遲遲無法點進系統目標位置頁面，那電腦就保留要安裝的系統硬碟，其他的資料硬碟包含隨身硬碟可以先關機移除，這樣會比較快一點哦。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INFO:program:Running... ntfsresize -m /dev/md/DATA_RAID_0p1</span><br><span class="line">DEBUG:anaconda.modules.common.base.base:Locale is set to zh_TW.UTF-8.</span><br><span class="line">DEBUG:anaconda.modules.storage.storage:Created the partitioning AUTOMATIC.</span><br><span class="line">DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Partitioning/1.</span><br></pre></td></tr></table></figure>
 <h2 id="如何解決之前遇到的問題"><a href="#如何解決之前遇到的問題" class="headerlink" title="如何解決之前遇到的問題"></a>如何解決之前遇到的問題</h2><h3 id="grub2一直抓不到Window系統"><a href="#grub2一直抓不到Window系統" class="headerlink" title="grub2一直抓不到Window系統"></a>grub2一直抓不到Window系統</h3><p>這問題我之前分析的是</p>
 <ol>
@@ -276,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora%20/" data-id="cl0w3mun200158zbg0k1z8yc7" data-title="安裝Windows 10與Fedora 35雙系統會遇到那些問題呢？" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora%20/" data-id="cl0x8t5z90010dwbgarrigjtv" data-title="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題" class="article-share-link">分享</a>
       
       
       
@@ -356,7 +356,7 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
       <ul>
         
           <li>
-            <a href="/2022/02/QuestionForInstallWindows10AndFedora%20/">安裝Windows 10與Fedora 35雙系統會遇到那些問題呢？</a>
+            <a href="/2022/02/QuestionForInstallWindows10AndFedora%20/">如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題</a>
           </li>
         
           <li>
