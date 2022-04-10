@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/</loc>
+    <loc>https://fishpcinfo.com/2022/04/Google-%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8-%E5%81%9A%E6%96%87%E6%9B%B8%E5%BF%85%E5%AD%B810%E5%80%8B%E9%8D%B5%E7%9B%A4%E5%BF%AB%E6%8D%B7%E9%8D%B5/</loc>
     
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fishpcinfo.com/2021/12/SELinuxconfiguration/</loc>
+    
+    <lastmod>2022-03-20</lastmod>
     
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/2022/01/GoogleDocOpenShare/</loc>
     
-    <lastmod>2022-03-18</lastmod>
+    <lastmod>2022-03-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fishpcinfo.com/2022/01/How%20Solved%20flathub%20public-key-not-found/</loc>
+    
+    <lastmod>2022-03-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/</loc>
+    
+    <lastmod>2022-03-19</lastmod>
     
   </url>
   
@@ -79,23 +100,9 @@
   </url>
   
   <url>
-    <loc>https://fishpcinfo.com/2022/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BAflathub%20public-key-not-found-%E5%95%8F%E9%A1%8C/</loc>
-    
-    <lastmod>2022-02-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://fishpcinfo.com/2021/11/fedoraInstallNextcloud/</loc>
     
     <lastmod>2022-01-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://fishpcinfo.com/2021/12/SELinuxconfiguration/</loc>
-    
-    <lastmod>2021-12-16</lastmod>
     
   </url>
   
@@ -130,7 +137,7 @@
 
   <url>
     <loc>https://fishpcinfo.com/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,21 +145,21 @@
   
   <url>
     <loc>https://fishpcinfo.com/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/tags/iPhone%E5%85%85%E9%9B%BB%E7%B7%9A/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/tags/%E5%AE%B6%E8%A3%A1Fedora%E7%9A%84%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -161,63 +168,63 @@
   
   <url>
     <loc>https://fishpcinfo.com/categories/GoogleCloudService/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/3C%E9%96%8B%E7%AE%B1/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/3C%E9%96%8B%E7%AE%B1/iPhone%E5%85%85%E9%9B%BB%E7%B7%9A/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/nextcloud/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/Flatpak/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://fishpcinfo.com/categories/Fedora/%E9%9B%99%E7%B3%BB%E7%B5%B1/</loc>
-    <lastmod>2022-03-19</lastmod>
+    <lastmod>2022-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
