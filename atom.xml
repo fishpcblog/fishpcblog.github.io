@@ -6,7 +6,7 @@
   <link href="https://fishpcinfo.com/atom.xml" rel="self"/>
   
   <link href="https://fishpcinfo.com/"/>
-  <updated>2022-04-10T11:41:07.396Z</updated>
+  <updated>2022-06-13T11:24:23.132Z</updated>
   <id>https://fishpcinfo.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google 文件教學-如何開啓更專注寫作的MarkDown功能</title>
+    <link href="https://fishpcinfo.com/2022/06/googleDocs-openMarkdown/"/>
+    <id>https://fishpcinfo.com/2022/06/googleDocs-openMarkdown/</id>
+    <published>2022-06-13T11:01:38.000Z</published>
+    <updated>2022-06-13T11:24:23.132Z</updated>
+    
+    <content type="html"><![CDATA[<p>根據今年改版，Google將Markdown的部份語法功能加進了Google 文件、投影片、繪圖中，這邊要提醒一下<strong>並不是所有Markddown語法都支援哦</strong>，像區塊類標記語言是不支援的如引用、分割線、、程式碼區塊都是不支援的，還有就是圖片顯示，今天這篇會整理有Google 文件、投影片、繪圖支援的Markdown語法，以及如何開啓Markdown功能。</p><span id="more"></span><h2 id="什麼是Markdown語言"><a href="#什麼是Markdown語言" class="headerlink" title="什麼是Markdown語言"></a>什麼是Markdown語言</h2><p>Markdown是一種輕量級標記式語言是由約翰·格魯伯在2004年所創立的，由於它易於閱讀、易於撰寫的特性。只要你熟悉了Markdown標記語言後完完全全可以用鍵盤更專注的寫出一篇有文章架構的文章。</p><h2 id="如何開啓Markdown功能"><a href="#如何開啓Markdown功能" class="headerlink" title="如何開啓Markdown功能"></a>如何開啓Markdown功能</h2><p>我們可以用瀏覽器連結到<a href="https://drive.google.com/?authuser=0">Google 雲端硬碟</a>新增空白的Google文件，然後滑鼠點擊功能列表的[工具]，然後會跳出功能清單，接着滑鼠點擊[偏好設定]，將自動偵測Markdown打勾即可。<br>Google繪圖與Google簡報也是跟Google 文件一樣操作。</p><h2 id="Markdown語法解釋"><a href="#Markdown語法解釋" class="headerlink" title="Markdown語法解釋"></a>Markdown語法解釋</h2><ul><li>標題類<br>輸入#字號數量後空格再輸入內容，#字號數量代表標題階級，#字號數量越少標題階級越大。</li><li>字體外觀類<br>斜體：將文字改成斜體只要左右兩側添加1顆星星或者1條底線<br>粗體：將文字改成粗體只要左右兩側添加2顆星星或者2條底線<br>粗斜體：將文字改成粗斜體只要左右兩側添加3顆星星或者3條底線<br>刪除線：將文字添加刪除線只要左右兩側添加1條橫線</li><li>超連結類<br>請依照Markdown語法格式輸入方刮號裏面輸入連接名稱，刮號裏面輸入超連結。</li><li>清單類<br>數字編號：輸入數字1空格文字內容<br>任務：輸入方刮號空格任務名稱<br>項目：輸入星字號空格編號名稱</li></ul><h2 id="Google-文件"><a href="#Google-文件" class="headerlink" title="Google 文件"></a>Google 文件</h2><p><strong>Markdown語法</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 標題1</span><br><span class="line">## 標題2</span><br><span class="line">### 標題3</span><br><span class="line">#### 標題4</span><br><span class="line">##### 標題5</span><br><span class="line">###### 標題6</span><br><span class="line"></span><br><span class="line">*斜體*、_斜體_</span><br><span class="line">***斜體加粗***、___斜體加粗___</span><br><span class="line">**粗體**、__粗體__</span><br><span class="line"></span><br><span class="line">[連結](https://fishpcinfo.com)</span><br><span class="line"></span><br><span class="line">1. 編號</span><br><span class="line">[] 任務</span><br><span class="line">* 項目</span><br><span class="line"></span><br><span class="line">--刪除線--</span><br></pre></td></tr></table></figure><h2 id="Google-繪圖、簡報"><a href="#Google-繪圖、簡報" class="headerlink" title="Google 繪圖、簡報"></a>Google 繪圖、簡報</h2><p><strong>MarkDown語法</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*斜體*、_斜體_</span><br><span class="line">***斜體加粗***、___斜體加粗___</span><br><span class="line">**粗體**、__粗體__</span><br><span class="line"></span><br><span class="line">[連結](https://fishpcinfo.com)</span><br><span class="line"></span><br><span class="line">1. 編號</span><br><span class="line">[] 任務</span><br><span class="line">* 項目</span><br><span class="line"></span><br><span class="line">--刪除線--</span><br></pre></td></tr></table></figure><h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><p>Markdown是2004年創立的，不過我是2021年開始使用Markdown，我目前使用OBSIDIAN筆記軟體，我把Markdown當成我的筆記軟體標配，我用Markdown做過如下事情</p><ul><li>筆記</li><li>文章</li><li>頭腦思緒脈絡梳理</li><li>子彈筆記</li><li>待辦清單</li><li>讀書心得</li><li>靈感捕捉</li></ul><p>如果是我的話我想稱它是一種<strong>輕量式文章架構標記語言</strong>，當靈感來時可以用簡易的標記語言更專注專注於寫作。</p><p>以上是我今天整理的Google 文件、投影片、繪圖支援的Markdown語法。讀者如果有需要可以直接copy走。</p><p>最後希望這篇文章能幫助到你在使用Google 文件時能力更邁進了一大步。如果想更加了解Markdown這邊整理了一些鏈接。</p><ul><li><a href="https://zh.wikipedia.org/zh-tw/Markdown">Markdown wiki</a></li><li><a href="https://markdown.tw/">Markdown 說明網站</a></li></ul><p>如果這篇文章對你有幫助請記得拍手並分享給使用Google 文件的人，最後你已經開啓Markdown功能了嗎？底下留言告訴我。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;根據今年改版，Google將Markdown的部份語法功能加進了Google 文件、投影片、繪圖中，這邊要提醒一下&lt;strong&gt;並不是所有Markddown語法都支援哦&lt;/strong&gt;，像區塊類標記語言是不支援的如引用、分割線、、程式碼區塊都是不支援的，還有就是圖片顯示，今天這篇會整理有Google 文件、投影片、繪圖支援的Markdown語法，以及如何開啓Markdown功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Google雲端服務" scheme="https://fishpcinfo.com/categories/GoogleCloudService/"/>
+    
+    <category term="Google文件教學" scheme="https://fishpcinfo.com/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="Google文件教學" scheme="https://fishpcinfo.com/tags/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Google 文件教學-做文書必學10個鍵盤快捷鍵</title>
