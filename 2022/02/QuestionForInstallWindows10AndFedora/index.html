@@ -25,7 +25,7 @@
 <meta property="og:description" content="這篇不是什麼很詳細的GPT Windows與Fedora雙系統安裝教學文章，這篇是我安裝雙系統筆記及安裝過程時所遇到的問題與解決方法。 爲什麼要重新安裝系統">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-02-25T04:37:52.000Z">
-<meta property="article:modified_time" content="2022-03-19T02:38:09.133Z">
+<meta property="article:modified_time" content="2022-06-18T03:04:31.288Z">
 <meta property="article:author" content="Joe">
 <meta property="article:tag" content="家裡Fedora的日常">
 <meta name="twitter:card" content="summary">
@@ -164,6 +164,7 @@
 <li><input disabled="" type="checkbox"> 電腦使用Fedora35 cinnamon 開機碟 進入live 系統<ul>
 <li><input disabled="" type="checkbox"> 用gdisk軟體分割出80G、200G btrfs分割區、1G Swap 分割區<ul>
 <li><input disabled="" type="checkbox"> 安裝Fedora cinnamon</li>
+<li>200MB(指定掛載/boot/efi)</li>
 <li>80G(指定掛載/)</li>
 <li>200G(指定掛載/home)</li>
 <li>1G(指定掛載Swap)</li>
@@ -177,6 +178,7 @@
 <li><input disabled="" type="checkbox"> 電腦使用Fedora35 Workstation 開機碟 進入live 系統<ul>
 <li><input disabled="" type="checkbox"> 用gdisk軟體分割出80G、200G btrfs分割區、1G Swap 分割區</li>
 <li><input disabled="" type="checkbox"> 安裝Fedora Workstation<ul>
+<li>200MB(指定掛載/boot/efi)(不重新格式化)</li>
 <li>80G(指定掛載/)</li>
 <li>200G(指定掛載/home)</li>
 <li>1G(指定掛載Swap)</li>
@@ -276,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/" data-id="cl4cof3b10011zobg6wktf5u7" data-title="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/" data-id="cl4ktio4v001cthbg3l537zad" data-title="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題" class="article-share-link">分享</a>
       
       
       
@@ -293,7 +295,15 @@
         <h3 class="article-title" style="font-size: 18px;">相關文章</h3>
     </div>
     <div class="article-entry">
-      <ul class="related-posts"><li class="related-posts-item"><a class="related-posts-link" href="/2022/01/How Solved flathub public-key-not-found/">如何解決flathub Cant check signature public key not found問題</a><div class="related-posts-item-abstract">這幾天我在Fedora系統要啓用flatpk時遇到了public key not found問題，起初我以爲可以在Google search 上找到答案，可是最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a><div class="related-posts-item-abstract">最近我在使用NextCloud的應用程式商店頁面無法顯示常用的行事曆、任務、專案管理這些應用程式來安裝，那是因爲使用紅帽系的發行版預設都會安裝SELinux軟體來提高系統安全性所以因爲權限關係會擋住NextCloud執行</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a><div class="related-posts-item-abstract">之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有
+      <ul class="related-posts"><li class="related-posts-item"><a class="related-posts-link" href="/2022/06/fedoraInstallManualNextcloud/">如何在fedora系統上手動安裝最新版Nextcloud</a><div class="related-posts-item-abstract">首先開啓終端機
+
+切換成su帳號1sudo -i
+
+安裝Apache1dnf install httpd
+
+新增Apache 配置檔1vim /etc/http/conf.d/nextcloud.conf
+
+將以下內容貼</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2022/01/How Solved flathub public-key-not-found/">如何解決flathub Cant check signature public key not found問題</a><div class="related-posts-item-abstract">這幾天我在Fedora系統要啓用flatpk時遇到了public key not found問題，起初我以爲可以在Google search 上找到答案，可是最後我還是沒找到答案，我只有找到別人在網上發問這個問題。事情過</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/SELinuxconfiguration/">如何配置SELinux組態</a><div class="related-posts-item-abstract">最近我在使用NextCloud的應用程式商店頁面無法顯示常用的行事曆、任務、專案管理這些應用程式來安裝，那是因爲使用紅帽系的發行版預設都會安裝SELinux軟體來提高系統安全性所以因爲權限關係會擋住NextCloud執行</div></li><li class="related-posts-item"><a class="related-posts-link" href="/2021/12/PcLinkNextCloud/">如何開放其他台電腦連線到Nextcloud伺服器</a><div class="related-posts-item-abstract">之前我已經成功在fedora架設nextcloud了不過現在還無法讓其他台電腦連到NextCloud所以這部份需要設定的有
 
 
 firewall(防火牆)
@@ -365,6 +375,10 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
       <ul>
         
           <li>
+            <a href="/2022/06/fedoraInstallManualNextcloud/">如何在fedora系統上手動安裝最新版Nextcloud</a>
+          </li>
+        
+          <li>
             <a href="/2022/06/googleDocs-openMarkdown/">Google 文件教學-如何開啓更專注寫作的MarkDown功能</a>
           </li>
         
@@ -380,10 +394,6 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
             <a href="/2022/02/iphoneChargerCable/">買iPhone充電線時要注意的事項[推薦給大家]</a>
           </li>
         
-          <li>
-            <a href="/2022/01/How%20Solved%20flathub%20public-key-not-found/">如何解決flathub Cant check signature public key not found問題</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -393,7 +403,7 @@ N</div></li><li class="related-posts-item"><a class="related-posts-link" href="/
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/">3C開箱</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/iPhone%E5%85%85%E9%9B%BB%E7%B7%9A/">iPhone充電線</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/Flatpak/">Flatpak</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/%E9%9B%99%E7%B3%BB%E7%B5%B1/">雙系統</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/">3C開箱</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/3C%E9%96%8B%E7%AE%B1/iPhone%E5%85%85%E9%9B%BB%E7%B7%9A/">iPhone充電線</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/">Fedora</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/Flatpak/">Flatpak</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/nextcloud/">nextcloud</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fedora/%E9%9B%99%E7%B3%BB%E7%B5%B1/">雙系統</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/">Google雲端服務</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GoogleCloudService/Google%E6%96%87%E4%BB%B6%E6%95%99%E5%AD%B8/">Google文件教學</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E6%8C%91%E9%81%B8%E8%BB%9F%E9%AB%94%E7%9A%84%E8%A7%80%E9%BB%9E/">個人挑選軟體的觀點</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
