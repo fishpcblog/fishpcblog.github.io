@@ -118,50 +118,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Fedora Workstation  使用快一年至近至近體驗還不錯，最近在想Fedora有沒有可能跟arch那樣從最基礎Linux系統一點一滴安裝自己所需的軟體就好，沒想到Fedora也有提供這種安裝方法。那如何最小化安裝Feodra系統請繼續看下去。</p>
-<h2 id="下載Fedora-Everything版"><a href="#下載Fedora-Everything版" class="headerlink" title="下載Fedora Everything版"></a>下載Fedora Everything版</h2><p>用瀏覽器打開此<a target="_blank" rel="noopener" href="https://alt.fedoraproject.org/">網站</a>，下載Fedora Everything 版ISO檔</p>
-<h2 id="Fedora-Everything-版ISO檔寫入隨身碟"><a href="#Fedora-Everything-版ISO檔寫入隨身碟" class="headerlink" title="Fedora Everything 版ISO檔寫入隨身碟"></a>Fedora Everything 版ISO檔寫入隨身碟</h2><h3 id="安裝gnome-disk"><a href="#安裝gnome-disk" class="headerlink" title="安裝gnome-disk"></a>安裝gnome-disk</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install gnome-disk</span><br></pre></td></tr></table></figure>
-<p>打開檔案總管瀏覽到Fedora Everything 版ISO檔目錄下，滑鼠選到該檔案按右鍵，選[Open With Image writer]，選擇要寫入ISO檔隨身碟，然後滑鼠按[開始恢復]，等待寫入完成。</p>
-<h2 id="BIOS設定"><a href="#BIOS設定" class="headerlink" title="BIOS設定"></a>BIOS設定</h2><p>首先電腦開機等待聽到主機發出嗶一聲，請狂按主機板製造商提供的熱鍵進入BIOS，將Security boot 關閉並將CSM設成自動。自動的話就是系統自動偵測啟動裝置是UEFI或者是MBR和附加裝置。</p>
-<h2 id="進入Fedora安裝程式畫面"><a href="#進入Fedora安裝程式畫面" class="headerlink" title="進入Fedora安裝程式畫面"></a>進入Fedora安裝程式畫面</h2><p>接下來電腦USB孔插入Fedora Everything 系統隨身碟，然後電腦重開機，等待聽到主機發出嗶一聲，請狂按主機板製造商提供的熱鍵進入啟動選單，再來選擇有UEFI開頭的雖身碟名稱後按Enter，等待進入開機選單後選擇[Test this media &amp; install Fedora36] 後按Enter，<br>系統會驗證ISO檔是否完整後會進入安裝程式畫面。</p>
-<p>接下來用快速操作指南方式說明格式如下：<br><strong>達成任務或者目前畫面標題：操作動作</strong></p>
-<ul>
-<li>歡迎使用Fedora 36：選擇[中文]➝[繁體(臺灣)]➝按[繼續]<h2 id="安裝摘要"><a href="#安裝摘要" class="headerlink" title="安裝摘要"></a>安裝摘要</h2>Fedora安裝摘要畫面要設定的有</li>
-<li> 本地化設定</li>
-<li>軟體</li>
-<li>系統</li>
-<li>用戶設定</li>
-</ul>
-<h2 id="本地化設定"><a href="#本地化設定" class="headerlink" title="本地化設定"></a>本地化設定</h2><p>鍵盤配置：選擇中華民國(臺灣語)➝按[減號按鈕]➝選擇英文(英文(美式))➝按[加入按鈕]➝按[完成按鈕]<br>語言支援：選擇English➝打勾English(United States)➝按[完成按鈕]</p>
-<h2 id="軟體"><a href="#軟體" class="headerlink" title="軟體"></a>軟體</h2><p>安裝來源：選擇最近的鏡像站<br>選擇軟體：選擇[最小安裝] ➝打勾[標準選項]<br>➝按[完成]</p>
-<h2 id="系統"><a href="#系統" class="headerlink" title="系統"></a>系統</h2><p>安裝目標位置：選擇[進階自訂(Blivet-GUI)] ➝按[完成按鈕]</p>
-<h3 id="Blivet-GUI磁碟分割"><a href="#Blivet-GUI磁碟分割" class="headerlink" title="Blivet-GUI磁碟分割"></a>Blivet-GUI磁碟分割</h3><p>總共要分割4個分割區</p>
-<ul>
-<li>500MB efi分割區</li>
-<li>80G  root 目錄</li>
-<li>100G home 目錄</li>
-<li>1G swap</li>
-</ul>
-<p>500MB efi分割區：按[加號按鈕]➝裝置類型選分割區➝大小輸入500➝單位MB➝檔案系統選efi➝標籤輸入efi➝掛載點輸入/boot/efi</p>
-<p>80G  root 目錄：按[加號按鈕]➝裝置類型選Btrfs儲區➝大小輸入80➝單位GB➝名稱欄位輸入fedora_root➝掛載點輸入/<br>100G home 目錄：按[加號按鈕]➝裝置類型選Btrfs儲區➝大小輸入100➝單位GB➝名稱欄位輸入fedora_home➝掛載點輸入/home<br>1G swap：按[加號按鈕]➝裝置類型選分割區➝大小輸入2.4➝單位GB➝檔案系統選swap➝標籤輸入fedora_swap</p>
-<p>全部設定完成，滑鼠按螢幕左上角[完成按鈕]按[加號按鈕]</p>
-<h3 id="網路與主機名稱"><a href="#網路與主機名稱" class="headerlink" title="網路與主機名稱"></a>網路與主機名稱</h3><p>主機名稱輸入super(依照你想輸入名稱)➝按[套用按鈕]➝滑鼠按螢幕左上角[完成按鈕]</p>
-<h2 id="開始安裝系統"><a href="#開始安裝系統" class="headerlink" title="開始安裝系統"></a>開始安裝系統</h2><p>滑鼠按螢幕右下角[開始安裝按鈕]，使用這種方式必須有要網路才能安裝</p>
-<p>Fedora基礎系統安裝完後，電腦重開機後登入系統就可以一點一滴安裝自己所需軟體及桌面環境了。</p>
-<h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><p>以上是我今天整理如何最小化安裝Feodra系統文章，使用Fedora Everything 版必須有要網路才能安裝Fedora系統。</p>
-<p>如果這篇文章對你有幫助，請別急著離開，花個1分鍾按文章底下拍手圖示(我會得到些些許收益)也記得分享給使用Fedora的人。</p>
-
+        <p>Fedora Workstation  使用快一年至近至近體驗還不錯，最近在想Fedora有沒有可能跟arch那樣從最基礎Linux系統一點一滴安裝自己所需的軟體就好，沒想到Fedora也有提供這種安裝方法。那如何最小化安裝Feodra系統
         
-        <!-- likecoin顯示 -->
+          <p class="article-more-link">
+            <a href="/2022/06/howdominalFeodra/#more">Read More</a>
+          </p>
         
-        <!-- 以上-->
-        
-        
-      
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/06/howdominalFeodra/" data-id="cl4t9z8860017jibg5bx3b56k" data-title="如何最小化安裝Fedora系統" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/06/howdominalFeodra/" data-id="cl4tabgyz001709bg6l7q677s" data-title="如何最小化安裝Fedora系統" class="article-share-link">分享</a>
       
       
       
@@ -216,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/06/fedoraInstallManualNextcloud/" data-id="cl4t9z8850015jibg5brm8l8e" data-title="如何在fedora系統上手動安裝最新版Nextcloud" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/06/fedoraInstallManualNextcloud/" data-id="cl4tabgyy001509bg13jw6ibj" data-title="如何在fedora系統上手動安裝最新版Nextcloud" class="article-share-link">分享</a>
       
       
       
@@ -271,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/06/googleDocs-openMarkdown/" data-id="cl4t9z87w000kjibg2tsw3sf2" data-title="Google 文件教學-如何開啓更專注寫作的MarkDown功能" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/06/googleDocs-openMarkdown/" data-id="cl4tabgyq000k09bgd0ia3d3m" data-title="Google 文件教學-如何開啓更專注寫作的MarkDown功能" class="article-share-link">分享</a>
       
       
       
@@ -326,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/04/GoogleDocsShortcutkey/" data-id="cl4t9z87u000ejibg0o16gvz4" data-title="Google 文件教學-做文書必學10個鍵盤快捷鍵" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/04/GoogleDocsShortcutkey/" data-id="cl4tabgyn000e09bgbgi588mc" data-title="Google 文件教學-做文書必學10個鍵盤快捷鍵" class="article-share-link">分享</a>
       
       
       
@@ -382,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/" data-id="cl4t9z88i002vjibgg4ci3r1c" data-title="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/02/QuestionForInstallWindows10AndFedora/" data-id="cl4tabgz1001e09bg2xnxdtu0" data-title="如何解決安裝Windows 10與Fedora 35 雙系統會遇到問題" class="article-share-link">分享</a>
       
       
       
@@ -437,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/02/iphoneChargerCable/" data-id="cl4t9z881000ujibg37zjd3fy" data-title="買iPhone充電線時要注意的事項[推薦給大家]" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/02/iphoneChargerCable/" data-id="cl4tabgyu000u09bger5wbozl" data-title="買iPhone充電線時要注意的事項[推薦給大家]" class="article-share-link">分享</a>
       
       
       
@@ -492,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/01/How%20Solved%20flathub%20public-key-not-found/" data-id="cl4t9z887001cjibgbth5g83d" data-title="如何解決flathub Cant check signature public key not found問題" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/01/How%20Solved%20flathub%20public-key-not-found/" data-id="cl4tabgz0001c09bg7uq7g9mb" data-title="如何解決flathub Cant check signature public key not found問題" class="article-share-link">分享</a>
       
       
       
@@ -547,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2022/01/GoogleDocOpenShare/" data-id="cl4t9z87v000ijibg2tx1c3hb" data-title="Google 文件教學-如何開啓協作功能" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2022/01/GoogleDocOpenShare/" data-id="cl4tabgyp000i09bg8950hxnp" data-title="Google 文件教學-如何開啓協作功能" class="article-share-link">分享</a>
       
       
       
@@ -602,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2021/12/SELinuxconfiguration/" data-id="cl4t9z883000xjibgfq6a17d2" data-title="如何配置SELinux組態" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2021/12/SELinuxconfiguration/" data-id="cl4tabgyw000x09bgcr388778" data-title="如何配置SELinux組態" class="article-share-link">分享</a>
       
       
       
@@ -657,7 +623,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fishpcinfo.com/2021/12/PcLinkNextCloud/" data-id="cl4t9z88j002wjibg2xma4j0b" data-title="如何開放其他台電腦連線到Nextcloud伺服器" class="article-share-link">分享</a>
+      <a data-url="https://fishpcinfo.com/2021/12/PcLinkNextCloud/" data-id="cl4tabgz2001j09bgahsf4a17" data-title="如何開放其他台電腦連線到Nextcloud伺服器" class="article-share-link">分享</a>
       
       
       
